@@ -29,28 +29,23 @@ gulp.task('styles', function() {
 
 // 編譯 Jade
 gulp.task('templates', function() {
-    return gulp.src('src/views/*.jade')
-        .pipe($.plumber())
-        .pipe($.jade({
-            pretty: true
-        }))
-        .pipe(gulp.dest('dist/'))
-        .pipe(notify({ message: 'Templates task complete' }));
+  return gulp.src('src/views/*.jade')
+    .pipe($.plumber())
+    .pipe($.jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('dist/'))
+    .pipe(notify({ message: 'Templates task complete' }));
 });
 
 // JSHint、拼接及縮小化 JavaScript
 gulp.task('scripts', function() {  
-  return gulp.src('src/scripts/**/*.js')
+  return gulp.src('src/scripts/*.js')
     // .pipe(jshint('.jshintrc'))
     // .pipe(jshint.reporter('default'))
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/assets/js'))
     .pipe(uglify())
-    .pipe(rename(function(path) {
-        path.basename += ".min";
-        path.extname = ".js";
-    }))
-    .pipe(gulp.dest('dist/scripts/js'))
+    .pipe(gulp.dest('dist/scripts'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
 
@@ -64,13 +59,13 @@ gulp.task('images', function() {
 
 // 複製CSS
 gulp.task('copy', function() {
-    return gulp.src(['src/stylesheets/**/*.css'])
+  return gulp.src(['src/stylesheets/**/*.css'])
     .pipe(gulp.dest('dist/stylesheets/'));
 });
 
 // 收拾
 gulp.task('clean', function() {  
-    return del(['dist/stylesheets', 'dist/scripts', 'dist/images']);
+  return del(['dist/stylesheets/*.css', 'dist/scripts/*.js', 'dist/images']);
 });
 
 // 重整瀏覽器
