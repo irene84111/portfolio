@@ -52,15 +52,21 @@ gulp.task('scripts', function() {
 // 壓縮圖片
 gulp.task('images', function() {  
   return gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
+    .pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/images'))
     .pipe(notify({ message: 'Images task complete' }));
 });
 
 // 複製CSS
-gulp.task('copy', function() {
+gulp.task('copyCSS', function() {
   return gulp.src(['src/stylesheets/**/*.css'])
     .pipe(gulp.dest('dist/stylesheets/'));
+});
+
+// 複製JS
+gulp.task('copyJS', function() {
+  return gulp.src(['src/scripts/plugins/*.js'])
+    .pipe(gulp.dest('dist/scripts/plugins'));
 });
 
 // 收拾
@@ -79,7 +85,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copy']);
+gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copyCSS', 'copyJS']);
 
 gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('src/stylesheets/**/*.{scss,sass}',['styles', reload]);
