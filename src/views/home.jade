@@ -8,9 +8,10 @@ block content
         .small-12.columns.title
           h1 YA YIN CHANG
           p Graphic Designer & Front-end Developer
-          i.fa.fa-arrow-down.fa-2x
+          i.fa.fa-angle-down.fa-3x
         
-    .left-arrow
+    .left-arrow-about
+    .right-arrow-skill
     .row
       .small-12.columns
         .home-box
@@ -19,72 +20,69 @@ block content
               .small-12.small-centered.columns
                 .portrait
                   img(src="images/profile.jpg", alt="")
-              .small-12.small-centered.columns
+              .small-10.small-centered
                 .content.text-center
                   p I'm a sophomore studing in 
-                    abbr(title="National Taiwan University of Science and Technology") NTUST. 
-                    br
-                    | While major in Graphic Design, I'm also a self-taught Front-end Developer.
+                    abbr(title="The National Taiwan University of Science and Technology") NTUST
+                    | , Taipei, Taiwan.
                 a.secondary.hollow.button(href='#') Learn more
 
           section.skill
             .row
-              .small-12.columns
-                .title
-                  h3 - Skill -
-              .small-12.medium-6.columns
-                .donut-chart-block-design
-                  .donut-chart
-                    #partOne.recorte
-                      .label.perOne(data-rel='30')
-                    #partTwo.recorte
-                      .label.perTwo(data-rel='50')
-                    #partThree.recorte
-                      .label.perThree(data-rel='20')   
+              .small-10.small-centered.columns
+                .content.text-center
+                  p While major in Graphic Design, 
+                    br
+                    | I'm also a self-taught Front-end Developer.
+                .small-12.medium-6.columns
+                  .donut-chart-block-design
+                    .donut-chart
+                      #partOne.recorte
+                        .label.perOne(data-rel='30')
+                      #partTwo.recorte
+                        .label.perTwo(data-rel='50')
+                      #partThree.recorte
+                        .label.perThree(data-rel='20')   
 
-                    p.center-date
-                      | Graphic Design               
-                  
-                    ul.percentages-design.horizontal-list
-                      li
-                        p.chartTab.perOne Adobe Photoshop
-                        p.percentage 30
+                      p.center-date Graphic Design               
+                    
+                    .percentages-design
+                      ul
+                        li.chartTab.perOne Adobe Illustrator 50
                           sup %
-                      li
-                        p.chartTab.perTwo Adobe Illustrator
-                        p.percentage 50
+                          i.fa.fa-paint-brush(style="margin-right: 10px;")
+                        li.chartTab.perTwo Adobe Photoshop 30
                           sup %
-                      li
-                        p.chartTab.perThree Maya
-                        p.percentage 20
+                          i.fa.fa-image(style="margin: 0px 11px 0px -3px;")
+                        li.chartTab.perThree Maya 20
                           sup %
+                          i.fa.fa-cube(style="margin: 0px 10px 0px -2px;")
 
-              .small-12.medium-6.columns
-                .donut-chart-block-web
-                  .donut-chart
-                    #partOne.recorte
-                      .label.perOne(data-rel='30')
-                    #partTwo.recorte
-                      .label.perTwo(data-rel='50')
-                    #partThree.recorte
-                      .label.perThree(data-rel='20')   
+                .small-12.medium-6.columns
+                  .donut-chart-block-web
+                    .donut-chart
+                      #partOne.recorte
+                        .label.perOne(data-rel='35')
+                      #partTwo.recorte
+                        .label.perTwo(data-rel='35')
+                      #partThree.recorte
+                        .label.perThree(data-rel='30')   
 
-                    p.center-date
-                      | Web Design               
-                  
-                  ul.percentages-web.horizontal-list
-                    li
-                      p.chartTab.perOne Adobe Photoshop
-                      p.percentage 30
-                        sup %
-                    li
-                      p.chartTab.perTwo Adobe Illustrator
-                      p.percentage 50
-                        sup %
-                    li
-                      p.chartTab.perThree Maya
-                      p.percentage 20
-                        sup %
+                      p.center-date Web
+                        br
+                        | Design               
+                    
+                    .percentages-web
+                      ul
+                        li.chartTab.perOne HTML/Jade 35
+                          sup %
+                          i.fa.fa-html5(style="margin-right: 10px; font-size:18px")
+                        li.chartTab.perTwo CSS/Sass 40
+                          sup %
+                          i.fa.fa-css3(style="margin: 0px 11px 0px -1px;")
+                        li.chartTab.perThree JavaScript 25
+                          sup %
+                          i.fa.fa-code(style="margin: 0px 10px 0px -2px;")
               
           
           section.project
@@ -109,7 +107,7 @@ block content
                     h3.major Title
                     p context
                     a.special(href='#') Learn more
-              a.more(href='#') All Works
+                  a.more(href='#') All Works
           
           section.blog
             .row
