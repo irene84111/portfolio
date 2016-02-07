@@ -1,89 +1,154 @@
 extends ./layout/_layout.jade
 block content
-  // Banner
-  section#banner
-    .inner
-      .logo
-        span.icon.fa-diamond
-      h2 This is Solid State
-      p
-        | Another free + fully responsive site template by 
-        a(href='http://html5up.net') HTML5 UP
-
-  // Wrapper
-  section#wrapper
-    // About
-    section#one.wrapper.spotlight.style1
-      .inner
-        a.image(href='#')
-          img(src='images/pic01.jpg', alt='')
-        .content
-          h2.major 
-            | YA-YIN CHANG
-          p
-            | I'm now a sophomore studing in National Taiwan University of Science and Technology (NTUST).
-            | While major in Graphic Design, I'm also a self-taught Front-end Developer.
-          a.special(href='#') Learn more
+  
+  .home-page
     
-    // Two
-    section#two.wrapper.alt.spotlight.style2
-      .inner
-        .content
-          h2.major Skills
-          p
-            | Test
-          a.special(href='#') Learn more
-    
-    // // Three
-    // section#three.wrapper.spotlight.style3
-    //   .inner
-    //     a.image(href='#')
-    //       img(src='images/pic03.jpg', alt='')
-    //     .content
-    //       h2.major Skills
-    //       p
-    //         | Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.
-    //       a.special(href='#') Learn more
-    
-    // Four
-    section#four.wrapper.alt.style1
-      .inner
-        h2.major Latest Work
-        p
-          | Test
-        section.features
-          article
-            a.image(href='#')
-              img(src='images/pic04.jpg', alt='')
-            h3.major Sed feugiat lorem
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
-            a.special(href='#') Learn more
-          
-          article
-            a.image(href='#')
-              img(src='images/pic05.jpg', alt='')
-            h3.major Nisl placerat
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
-            a.special(href='#') Learn more
-          
-          article
-            a.image(href='#')
-              img(src='images/pic06.jpg', alt='')
-            h3.major Ante fermentum
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
-            a.special(href='#') Learn more
-          
-          article
-            a.image(href='#')
-              img(src='images/pic07.jpg', alt='')
-            h3.major Fusce consequat
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.
-            a.special(href='#') Learn more
+    section.cover
+      .row
+        .small-12.columns.title
+          h1 YA YIN CHANG
+          p Graphic Designer & Front-end Developer
+          i.fa.fa-angle-down.fa-3x
         
-        ul.actions
-          li
-            a.button(href='#') Browse All
+    .left-arrow-about
+    .right-arrow-skill
+    .row
+      .small-12.columns
+        .home-box
+          section.about
+            .row
+              .small-12.small-centered.columns
+                .portrait
+                  img(src="images/profile.jpg", alt="")
+              .small-10.small-centered
+                .content.text-center
+                  p I'm a sophomore studing in 
+                    abbr(title="The National Taiwan University of Science and Technology") NTUST
+                    | , Taipei, Taiwan.
+                a.secondary.hollow.button(href='#') Learn more
+
+          section.skill
+            .row
+              .small-10.small-centered.columns
+                .content.text-center
+                  p While major in Graphic Design, 
+                    br
+                    | I'm also a self-taught Front-end Developer.
+                .small-12.medium-6.columns
+                  .donut-chart-block-design
+                    .donut-chart
+                      #partOne.recorte
+                        .label.perOne(data-rel='30')
+                      #partTwo.recorte
+                        .label.perTwo(data-rel='50')
+                      #partThree.recorte
+                        .label.perThree(data-rel='20')   
+
+                      p.center-date Graphic Design               
+                    
+                    .percentages-design
+                      ul
+                        li.chartTab.perOne Adobe Illustrator 50
+                          sup %
+                          i.fa.fa-paint-brush(style="margin-right: 10px;")
+                        li.chartTab.perTwo Adobe Photoshop 30
+                          sup %
+                          i.fa.fa-image(style="margin: 0px 11px 0px -3px;")
+                        li.chartTab.perThree Maya 20
+                          sup %
+                          i.fa.fa-cube(style="margin: 0px 10px 0px -2px;")
+
+                .small-12.medium-6.columns
+                  .donut-chart-block-web
+                    .donut-chart
+                      #partOne.recorte
+                        .label.perOne(data-rel='35')
+                      #partTwo.recorte
+                        .label.perTwo(data-rel='35')
+                      #partThree.recorte
+                        .label.perThree(data-rel='30')   
+
+                      p.center-date Web
+                        br
+                        | Design               
+                    
+                    .percentages-web
+                      ul
+                        li.chartTab.perOne HTML/Jade 35
+                          sup %
+                          i.fa.fa-html5(style="margin-right: 10px; font-size:18px")
+                        li.chartTab.perTwo CSS/Sass 40
+                          sup %
+                          i.fa.fa-css3(style="margin: 0px 11px 0px -1px;")
+                        li.chartTab.perThree JavaScript 25
+                          sup %
+                          i.fa.fa-code(style="margin: 0px 10px 0px -2px;")
+              
+          
+          section.project
+            .row
+              .small-12.columns
+                .image
+                  img(src='', alt='')
+                .content
+                  h2.major Lastest Work
+              .works
+                .small-12.medium-6.columns
+                  article
+                    .image
+                      img(src='images/pic04.jpg', alt='')
+                    h3.major Title
+                    p context
+                    a.special(href='#') Learn more
+                .small-12.medium-6.columns
+                  article
+                    .image
+                      img(src='images/pic04.jpg', alt='')
+                    h3.major Title
+                    p context
+                    a.special(href='#') Learn more
+                  a.more(href='#') All Works
+          
+          section.blog
+            .row
+              .small-12.columns
+                .content
+                  h2.major Blog
+              .post
+                .small-10.small-centered.columns
+                  .small-12.medium-6.columns
+                    .image
+                      img(src='images/pic04.jpg', alt='')
+                  .small-12.medium-6.end.columns
+                    h3.major Title
+                    p context
+                    a.special(href='#') View more
+              
+          section.contact
+          .row
+            .small-12.columns
+              h2 Get in touch
+            
+            .small-6.columns
+              ul.contact
+                li
+                  a.fa.fa-envelope.fa-2x(href="mailto:irene84111@gmail.com") irene84111@gmail.com
+                li
+                  a.fa.fa-facebook-square.fa-2x(href="https://www.facebook.com/irene.chang.735"  target="_blank")
+                li
+                  a.fa.fa-github-square.fa-2x(href="https://github.com/irene84111" target="_blank")
+            
+            .small-6.columns
+              form(method='post', action='#')
+                .field
+                  label(for="middle-label") Name
+                    input#name(type='text')
+                .field
+                  label(for="middle-label") Email
+                    input#email(type='email')
+                .field
+                  label(for="middle-label") Message
+                    textarea#message(name='message', rows='4')
+              
+              .input-group-button
+                input.button(type="submit", value="Submit")
