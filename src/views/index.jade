@@ -12,6 +12,7 @@ block content
         
     .left-arrow-about
     .right-arrow-skill
+    .left-arrow-work
     .row
       .small-12.columns
         .home-box
@@ -25,7 +26,8 @@ block content
                   p I'm a sophomore studing in 
                     abbr(title="The National Taiwan University of Science and Technology") NTUST
                     | , Taipei, Taiwan.
-                a.secondary.hollow.button(href='#') Learn more
+              .small-12.columns
+                a.secondary.hollow.button.btn-about(href='#') Learn more
 
           section.skill
             .row
@@ -87,35 +89,34 @@ block content
           
           section.project
             .row
+              .small-10.small-centered.columns
+                .content.text-center
+                  p Here are my lastast work:
+              .small-11.small-centered.columns
+                .small-12.medium-6.columns
+                  article
+                    .image
+                      img(src='images/pic04.jpg', alt='')
+                    h3.major Title
+                    p context
+                    a.special(href='#') Learn more
+                .small-12.medium-6.columns
+                  article
+                    .image
+                      img(src='images/pic04.jpg', alt='')
+                    h3.major Title
+                    p context
+                    a.special(href='#') Learn more
               .small-12.columns
-                .image
-                  img(src='', alt='')
-                .content
-                  h2.major Lastest Work
-              .works
-                .small-12.medium-6.columns
-                  article
-                    .image
-                      img(src='images/pic04.jpg', alt='')
-                    h3.major Title
-                    p context
-                    a.special(href='#') Learn more
-                .small-12.medium-6.columns
-                  article
-                    .image
-                      img(src='images/pic04.jpg', alt='')
-                    h3.major Title
-                    p context
-                    a.special(href='#') Learn more
-                  a.more(href='#') All Works
+                a.secondary.hollow.button.btn-work(href='#') All Works
           
           section.blog
             .row
-              .small-12.columns
-                .content
-                  h2.major Blog
-              .post
-                .small-10.small-centered.columns
+              .small-10.small-centered.columns
+                .content.text-center
+                  p I also like to share what I've learnt and done:
+              .small-10.small-centered.columns
+                article
                   .small-12.medium-6.columns
                     .image
                       img(src='images/pic04.jpg', alt='')
@@ -123,6 +124,8 @@ block content
                     h3.major Title
                     p context
                     a.special(href='#') View more
+              .small-12.columns
+                a.secondary.hollow.button.btn-blog(href='#') All Articles
               
           section.contact
           .row
