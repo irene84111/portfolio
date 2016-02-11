@@ -1,5 +1,24 @@
 extends ./layout/_layout.jade
 block content
+  nav#cd-vertical-nav
+    ul
+      li
+        a(href='#about', data-number='1')
+          span.cd-dot
+          span.cd-label About
+      li
+        a(href='#skill', data-number='2')
+          span.cd-dot
+          span.cd-label Skill
+      li
+        a(href='#work', data-number='3')
+          span.cd-dot
+          span.cd-label Works
+      li
+        a(href='#blog', data-number='4')
+          span.cd-dot
+          span.cd-label Blog
+
   .home-page#top
     section.cover
       .row
@@ -8,28 +27,24 @@ block content
           p Graphic Designer & Front-end Developer
           a(href="#start")
             i.fa.fa-angle-down.fa-3x
-        
-    .left-arrow-about
-    .right-arrow-skill
-    .left-arrow-work
-    .right-arrow-blog
+
     .row
       .small-12.columns
         .home-box#start
-          section.about
+          section.about.cd-section#about
             .row
               .small-12.small-centered.columns
                 .portrait
                   img(src="images/profile.jpg", alt="")
               .small-10.small-centered
-                .content.text-center
+                .content.text-center(style="padding-top:60px")
                   p I'm a sophomore studing in 
                     abbr(title="The National Taiwan University of Science and Technology") NTUST
                     | , Taipei, Taiwan.
               .small-12.columns
                 a.secondary.hollow.button.btn-about(href='#') Learn more
 
-          section.skill
+          section.skill.cd-section#skill
             .row
               .small-10.small-centered.columns
                 .content.text-center
@@ -87,30 +102,28 @@ block content
                           i.fa.fa-code(style="margin: 0px 10px 0px -2px;")
               
           
-          section.project
+          section.work.cd-section#work
             .row
               .small-10.small-centered.columns
                 .content.text-center
                   p Here are my lastast work:
-              .small-11.small-centered.columns
+              .small-10.small-centered.columns
                 .small-12.medium-6.columns
                   article
-                    .image
-                      img(src='images/pic04.jpg', alt='')
+                    .image(style="background-image:url('images/pic04.jpg')")
                     h3.major Title
                     p context
                     a.special(href='#') Learn more
                 .small-12.medium-6.columns
                   article
-                    .image
-                      img(src='images/pic04.jpg', alt='')
+                    .image(style="background-image:url('images/pic04.jpg')")
                     h3.major Title
                     p context
                     a.special(href='#') Learn more
               .small-12.columns
                 a.secondary.hollow.button.btn-work(href='#') All Works
           
-          section.blog
+          section.blog.cd-section#blog
             .row
               .small-10.small-centered.columns
                 .content.text-center
