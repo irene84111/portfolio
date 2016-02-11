@@ -1,4 +1,19 @@
 //@import "compass/css3";
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:after, &:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
 
 .home-page{
   font-family: 'Montserrat', sans-serif;
@@ -30,58 +45,7 @@
       margin: 30px 0px;
     }
   }
-  
-  .left-arrow-about{
-    width: 100%;
-    height: 0;
-    border-style: solid;
-    border-width: 150px;
-    border-color: transparent transparent transparent rgba(255, 0, 93, 0.3);
-    position: absolute;
-    left: 0px;
-  }
-  .right-arrow-skill{
-    width: 100%;
-    height: 0;
-    border-style: solid;
-    border-width: 150px;
-    border-color: transparent rgba(51,111,113,0.5) transparent transparent ;
-    position: absolute;
-    top: 1400px;
-    right: 0px;
-  }
-  .left-arrow-work{
-    width: 100%;
-    height: 0;
-    border-style: solid;
-    border-width: 150px;
-    border-color: transparent transparent transparent rgba(255, 213, 0, 0.3);
-    position: absolute;
-    top: 1900px;
-    left: 0px;
-  }
-  .right-arrow-blog{
-    width: 100%;
-    height: 0;
-    border-style: solid;
-    border-width: 150px;
-    border-color: transparent rgba(100, 0, 200, 0.3) transparent transparent ;
-    position: absolute;
-    top: 2450px;
-    right: 0px;
-  }
-  .left-arrow-{
-    width: 100%;
-    height: 0;
-    border-style: solid;
-    border-width: 150px;
-    border-color: transparent transparent transparent rgba(255, 0, 93, 0.3);
-    position: absolute;
-    top: 1350px;
-    left: 0px;
-  }
-  
-  
+
   .home-box{
     background: rgba(254, 254, 254, 0.9);
     max-width: 800px;
@@ -89,6 +53,7 @@
     border-radius: 10px 10px 0px 0px;
     margin: 0px auto;
     padding-bottom: 20px;
+    z-index: 1000;
     
     .button.hollow.secondary{
       border-radius: 3px;
@@ -101,23 +66,27 @@
     }
     
     .button.hollow.secondary.btn-about:hover, .button.hollow.secondary.btn-about:focus{
-      border: 1px solid rgba(255, 0, 93, 0.6);
-      color: rgba(255, 0, 93, 0.6);
+      border: 1px solid rgba(178, 213, 186, 0.8);
+      color: rgba(178, 213, 186, 0.8);
     }
     
     .button.hollow.secondary.btn-work:hover, .button.hollow.secondary.btn-work:focus{
-      border: 1px solid rgba(255, 213, 0, 0.8);
-      color: rgba(255, 213, 0, 0.8);
+      border: 1px solid rgba(97, 173, 160, 0.8);
+      color: rgba(97, 173, 160, 0.8);
     }
     
     .button.hollow.secondary.btn-blog:hover, .button.hollow.secondary.btn-blog:focus{
-      border: 1px solid rgba(100, 0, 200, 0.8);
-      color: rgba(100, 0, 200, 0.8);
+      border: 1px solid rgba(36, 143, 141, 0.8);
+      color: rgba(36, 143, 141, 0.8);
     }
     
-    .button.hollow.secondary.btn-contact:hover, .button.hollow.secondary.btn-contact:focus{
-      border: 1px solid rgba(51,51,51,0.8);
-      color: rgba(51,51,51,0.8);
+    a.special{
+      font-size: 14px;
+      float: none;
+      color: rgba(0, 110, 255, 0.8);
+    }
+    a.special:hover, a.special:focus{
+      color:rgba(0, 64, 148, 1);
     }
     
     .title{
@@ -126,7 +95,7 @@
     }
     
     .content{
-      padding: 80px 0px 30px;
+      padding: 120px 0px 40px;
       line-height: 32px;
       color: rgba(51, 51, 51, 0.8);
       abbr{
@@ -204,7 +173,7 @@
           #partOne {
             transform: rotate(0deg);
             .label {
-              background-color: #FCB150;
+              background-color: #F7A541;
               transform: rotate(180deg);
             }
           }
@@ -212,7 +181,7 @@
           #partTwo {
             transform: rotate(180deg);
             .label {
-              background-color: #4FC4F6;
+              background-color: #FACA66;
               transform: rotate(120deg);
             }
           }
@@ -220,7 +189,7 @@
           #partThree {
             transform: rotate(300deg);
             .label {
-              background-color: #11A8AB;
+              background-color: #FEE5AD;
               transform: rotate(60deg);
             }
           }
@@ -240,13 +209,13 @@
           }
           
           &.perOne {
-            border-bottom: 5px solid #fcb150;
+            border-bottom: 5px solid #F7A541;
           }
           &.perTwo {
-            border-bottom: 5px solid #4fc4f6;
+            border-bottom: 5px solid #FACA66;
           }
           &.perThree {
-            border-bottom: 5px solid #11a8ab;
+            border-bottom: 5px solid #FEE5AD;
           }
         }
       }
@@ -264,7 +233,7 @@
           #partOne {
             transform: rotate(0deg);
             .label {
-              background-color: #e27036;
+              background-color: #B2D5BA;
               transform: rotate(126deg);
             }
           }
@@ -272,7 +241,7 @@
           #partTwo {
             transform: rotate(126deg);
             .label {
-              background-color: #1994e6;
+              background-color: #61ADA0;
               transform: rotate(144deg);
             }
           }
@@ -280,7 +249,7 @@
           #partThree {
             transform: rotate(270deg);
             .label {
-              background-color: #e6d600;
+              background-color: #248F8D;
               transform: rotate(90deg);
             }
           }
@@ -300,35 +269,42 @@
           }
           
           &.perOne {
-            border-bottom: 5px solid #e27036;
+            border-bottom: 5px solid #B2D5BA;
           }
           &.perTwo {
-            border-bottom: 5px solid #1994e6;
+            border-bottom: 5px solid #61ADA0;
           }
           &.perThree {
-            border-bottom: 5px solid #e6d600;
+            border-bottom: 5px solid #248F8D;
           }
         }
       }
     }
     
-    .project{
+    .work{
       article{
-        margin: 10px 0px 40px;
+        margin: 10px 0px 60px;
+        .image{
+          height: 200px;
+          background-position: center center;
+          background-size: cover;
+          border-radius: 3px;
+          margin-bottom: 20px;
+        }
       }
     }
     
     .blog{
-      height: 500px;
+      height: 580px;
       article{
         width: auto;
         height: 240px;
         .image{
-          width: 300px;
           height: 200px;
-          float: left;
           background-position: center center;
           background-size: cover;
+          border-radius: 3px;
+          margin-bottom: 20px;
         }
       }
     }
@@ -341,7 +317,6 @@ footer{
     text-align: center;
     p{
       margin-top: -10px;
-      margin-bottom: -10px;
     }
   }
   .social-link{
@@ -357,3 +332,89 @@ footer{
   }
 }
 
+// Virtical Navigation
+
+#cd-vertical-nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+  li {
+    list-style: none;
+    text-align: right;
+  }
+  a {
+    display: inline-block;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    span {
+      float: right;
+      display: inline-block;
+      -webkit-transform: scale(0.6);
+      -moz-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+      -o-transform: scale(0.6);
+      transform: scale(0.6);
+    }
+    &:hover {
+      span {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+      }
+      .cd-label {
+        opacity: 1;
+      }
+    }
+    &.is-selected .cd-dot {
+      background-color: white;
+    }
+  }
+  .cd-dot {
+    position: relative;
+    // we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value
+    top: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #444;
+    -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+    -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+    transition: transform 0.2s, background-color 0.5s;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  .cd-label {
+    position: relative;
+    margin-right: 10px;
+    padding: .4em .5em;
+    color: #444;
+    font-size: 14px;
+    font-size: 0.875rem;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+  }
+}
