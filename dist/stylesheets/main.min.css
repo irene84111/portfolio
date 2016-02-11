@@ -1,23 +1,24 @@
 .home-page{font-family:Montserrat,sans-serif;background-attachment:fixed;background-repeat:no-repeat;background-image:url(../images/bg.jpg);background-position:top center;background-size:cover;padding:0 20px}
 .home-page .cover{height:800px}
-.home-page .left-arrow-about,.home-page .left-arrow-work,.home-page .right-arrow-skill{width:100%;height:0;border-style:solid;border-width:150px;position:absolute}
+.home-page .left-arrow-,.home-page .left-arrow-about,.home-page .left-arrow-work,.home-page .right-arrow-blog,.home-page .right-arrow-skill{width:100%;height:0;border-style:solid;border-width:150px;position:absolute}
 .home-page .cover .title{position:absolute;bottom:0;left:0;text-align:center}
 .home-page .cover .title h1{color:rgba(51,51,51,.9);text-shadow:8px 8px 3px rgba(77,160,176,.3),-2px -2px 5px rgba(213,51,105,.6),0 0 10px rgba(255,255,255,.8)}
 .home-page .cover .title p{color:rgba(51,51,51,.8);text-shadow:0 0 5px rgba(255,255,255,.8)}
 .home-page .cover i{color:rgba(51,51,51,.8);margin:30px 0}
 .home-page .left-arrow-about{border-color:transparent transparent transparent rgba(255,0,93,.3);left:0}
-.home-page .right-arrow-skill{border-color:transparent rgba(51,111,113,.5) transparent transparent;top:1350px;right:0}
-.home-page .left-arrow-work{border-color:transparent transparent transparent rgba(255,213,0,.5);top:1850px;left:0}
-.home-page .left-arrow-,.home-page .right-arrow-blog{width:100%;height:0;border-style:solid;border-width:150px;top:1350px;position:absolute}
-.home-page .right-arrow-blog{border-color:transparent rgba(51,111,113,.3) transparent transparent;right:0}
-.home-page .left-arrow-{border-color:transparent transparent transparent rgba(255,0,93,.3);left:0}
-.home-page .home-box{background:rgba(254,254,254,.9);max-width:800px;height:100%;border-radius:10px;margin:0 auto}
+.home-page .right-arrow-skill{border-color:transparent rgba(51,111,113,.5) transparent transparent;top:1400px;right:0}
+.home-page .left-arrow-work{border-color:transparent transparent transparent rgba(255,213,0,.3);top:1900px;left:0}
+.home-page .right-arrow-blog{border-color:transparent rgba(100,0,200,.3) transparent transparent;top:2450px;right:0}
+.home-page .left-arrow-{border-color:transparent transparent transparent rgba(255,0,93,.3);top:1350px;left:0}
+.home-page .home-box{background:rgba(254,254,254,.9);max-width:800px;height:100%;border-radius:10px 10px 0 0;margin:0 auto;padding-bottom:20px}
 .home-page .home-box .button.hollow.secondary{border-radius:3px;border:1px solid rgba(119,119,119,.8);color:#777;margin:0 auto;float:none;display:block;width:120px}
 .home-page .home-box .skill .percentages-design .chartTab i,.home-page .home-box .skill .percentages-web .chartTab i{float:left}
 .home-page .home-box .button.hollow.secondary.btn-about:focus,.home-page .home-box .button.hollow.secondary.btn-about:hover{border:1px solid rgba(255,0,93,.6);color:rgba(255,0,93,.6)}
 .home-page .home-box .button.hollow.secondary.btn-work:focus,.home-page .home-box .button.hollow.secondary.btn-work:hover{border:1px solid rgba(255,213,0,.8);color:rgba(255,213,0,.8)}
+.home-page .home-box .button.hollow.secondary.btn-blog:focus,.home-page .home-box .button.hollow.secondary.btn-blog:hover{border:1px solid rgba(100,0,200,.8);color:rgba(100,0,200,.8)}
+.home-page .home-box .button.hollow.secondary.btn-contact:focus,.home-page .home-box .button.hollow.secondary.btn-contact:hover{border:1px solid rgba(51,51,51,.8);color:rgba(51,51,51,.8)}
 .home-page .home-box .title{text-align:center;margin:30px 0}
-.home-page .home-box .content{padding:60px 0 20px;line-height:32px;color:rgba(51,51,51,.8)}
+.home-page .home-box .content{padding:80px 0 30px;line-height:32px;color:rgba(51,51,51,.8)}
 .home-page .home-box .content abbr{color:rgba(51,51,51,.8)}
 .home-page .home-box .about{color:#333;margin:0 auto;padding:60px 0 0}
 .home-page .home-box .about .portrait{width:200px;height:200px;margin:0 auto}
@@ -50,4 +51,11 @@
 .home-page .home-box .skill .percentages-web .chartTab.perOne{border-bottom:5px solid #e27036}
 .home-page .home-box .skill .percentages-web .chartTab.perTwo{border-bottom:5px solid #1994e6}
 .home-page .home-box .skill .percentages-web .chartTab.perThree{border-bottom:5px solid #e6d600}
-.home-page .home-box .blog article,.home-page .home-box .project article{margin:10px 0 40px}
+.home-page .home-box .project article{margin:10px 0 40px}
+.home-page .home-box .blog{height:500px}
+.home-page .home-box .blog article{width:auto;height:240px}
+.home-page .home-box .blog article .image{width:300px;height:200px;float:left;background-position:center center;background-size:cover}
+footer .top{color:#444;text-align:center}
+footer .top p{margin-top:-10px;margin-bottom:-10px}
+footer .social-link a{display:inline-block;padding:0 5px}
+footer .copyright{text-align:right;color:#444;font-size:12px}

@@ -1,21 +1,21 @@
 extends ./layout/_layout.jade
 block content
-  
-  .home-page
-    
+  .home-page#top
     section.cover
       .row
         .small-12.columns.title
           h1 YA YIN CHANG
           p Graphic Designer & Front-end Developer
-          i.fa.fa-angle-down.fa-3x
+          a(href="#start")
+            i.fa.fa-angle-down.fa-3x
         
     .left-arrow-about
     .right-arrow-skill
     .left-arrow-work
+    .right-arrow-blog
     .row
       .small-12.columns
-        .home-box
+        .home-box#start
           section.about
             .row
               .small-12.small-centered.columns
@@ -118,40 +118,13 @@ block content
               .small-10.small-centered.columns
                 article
                   .small-12.medium-6.columns
-                    .image
-                      img(src='images/pic04.jpg', alt='')
+                    .image(style="background-image:url('images/pic04.jpg')")
                   .small-12.medium-6.end.columns
-                    h3.major Title
-                    p context
-                    a.special(href='#') View more
+                    .post
+                      h3.major Title
+                      p context
+                      a.special(href='#') View more
               .small-12.columns
                 a.secondary.hollow.button.btn-blog(href='#') All Articles
-              
-          section.contact
-          .row
-            .small-12.columns
-              h2 Get in touch
-            
-            .small-6.columns
-              ul.contact
-                li
-                  a.fa.fa-envelope.fa-2x(href="mailto:irene84111@gmail.com") irene84111@gmail.com
-                li
-                  a.fa.fa-facebook-square.fa-2x(href="https://www.facebook.com/irene.chang.735"  target="_blank")
-                li
-                  a.fa.fa-github-square.fa-2x(href="https://github.com/irene84111" target="_blank")
-            
-            .small-6.columns
-              form(method='post', action='#')
-                .field
-                  label(for="middle-label") Name
-                    input#name(type='text')
-                .field
-                  label(for="middle-label") Email
-                    input#email(type='email')
-                .field
-                  label(for="middle-label") Message
-                    textarea#message(name='message', rows='4')
-              
-              .input-group-button
-                input.button(type="submit", value="Submit")
+         
+          include ./partials/_footer

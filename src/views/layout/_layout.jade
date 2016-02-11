@@ -21,10 +21,11 @@ html(lang='en')
   body
     include ../partials/_header
     block content
-    include ../partials/_footer
 
     // BEGIN: Scripts    
     script(src='scripts/plugins/jquery-1.12.0.min.js', type='text/javascript')
     script(src='scripts/plugins/foundation.min.js', type='text/javascript')
     script(src='http://cdnjs.cloudflare.com/ajax/libs/d3/3.2.2/d3.v3.min.js')
-    script(src='scripts/plugins/prefixfree.min.js', type='text/javascript')
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js")
+    script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js")
+    script(src='scripts/main.js', type='text/javascript')
