@@ -10,7 +10,7 @@
 .home-page .left-arrow-work{border-color:transparent transparent transparent rgba(255,213,0,.3);top:1900px;left:0}
 .home-page .right-arrow-blog{border-color:transparent rgba(100,0,200,.3) transparent transparent;top:2450px;right:0}
 .home-page .left-arrow-{border-color:transparent transparent transparent rgba(255,0,93,.3);top:1350px;left:0}
-.home-page .home-box{background:rgba(254,254,254,.9);max-width:800px;height:100%;border-radius:10px 10px 0 0;margin:0 auto;padding-bottom:60px}
+.home-page .home-box{background:rgba(254,254,254,.9);max-width:800px;height:100%;border-radius:10px 10px 0 0;margin:0 auto;padding-bottom:20px}
 .home-page .home-box .button.hollow.secondary{border-radius:3px;border:1px solid rgba(119,119,119,.8);color:#777;margin:0 auto;float:none;display:block;width:120px}
 .home-page .home-box .skill .percentages-design .chartTab i,.home-page .home-box .skill .percentages-web .chartTab i{float:left}
 .home-page .home-box .button.hollow.secondary.btn-about:focus,.home-page .home-box .button.hollow.secondary.btn-about:hover{border:1px solid rgba(255,0,93,.6);color:rgba(255,0,93,.6)}
@@ -52,8 +52,10 @@
 .home-page .home-box .skill .percentages-web .chartTab.perTwo{border-bottom:5px solid #1994e6}
 .home-page .home-box .skill .percentages-web .chartTab.perThree{border-bottom:5px solid #e6d600}
 .home-page .home-box .project article{margin:10px 0 40px}
+.home-page .home-box .blog{height:500px}
 .home-page .home-box .blog article{width:auto;height:240px}
 .home-page .home-box .blog article .image{width:300px;height:200px;float:left;background-position:center center;background-size:cover}
-footer{text-align:center}
-footer ul{list-style-type:none;text-align:center}
-footer ul li{display:inline-block}
+footer .top{color:#444;text-align:center}
+footer .top p{margin-top:-10px;margin-bottom:-10px}
+footer .social-link a{display:inline-block;padding:0 5px}
+footer .copyright{text-align:right;color:#444;font-size:12px}

@@ -88,7 +88,7 @@
     height: 100%;
     border-radius: 10px 10px 0px 0px;
     margin: 0px auto;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     
     .button.hollow.secondary{
       border-radius: 3px;
@@ -319,6 +319,7 @@
     }
     
     .blog{
+      height: 500px;
       article{
         width: auto;
         height: 240px;
@@ -335,13 +336,24 @@
 }
 
 footer{
-  text-align: center;
-  ul{
-    list-style-type: none;
+  .top{
+    color: #444;
     text-align: center;
-    li{
-      display: inline-block;
+    p{
+      margin-top: -10px;
+      margin-bottom: -10px;
     }
+  }
+  .social-link{
+    a{
+      display: inline-block;
+      padding: 0px 5px;
+    }
+  }
+  .copyright{
+    text-align: right;
+    color: #444;
+    font-size: 12px;
   }
 }
 

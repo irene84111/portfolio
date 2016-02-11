@@ -1,14 +1,13 @@
 extends ./layout/_layout.jade
 block content
-  
-  .home-page
-    
+  .home-page#top
     section.cover
       .row
         .small-12.columns.title
           h1 YA YIN CHANG
           p Graphic Designer & Front-end Developer
-          i.fa.fa-angle-down.fa-3x
+          a(href="#start")
+            i.fa.fa-angle-down.fa-3x
         
     .left-arrow-about
     .right-arrow-skill
@@ -16,7 +15,7 @@ block content
     .right-arrow-blog
     .row
       .small-12.columns
-        .home-box
+        .home-box#start
           section.about
             .row
               .small-12.small-centered.columns
@@ -127,3 +126,5 @@ block content
                       a.special(href='#') View more
               .small-12.columns
                 a.secondary.hollow.button.btn-blog(href='#') All Articles
+         
+          include ./partials/_footer
