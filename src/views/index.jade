@@ -13,6 +13,7 @@ block content
     .left-arrow-about
     .right-arrow-skill
     .left-arrow-work
+    .right-arrow-blog
     .row
       .small-12.columns
         .home-box
@@ -118,40 +119,50 @@ block content
               .small-10.small-centered.columns
                 article
                   .small-12.medium-6.columns
-                    .image
-                      img(src='images/pic04.jpg', alt='')
+                    .image(style="background-image:url('images/pic04.jpg')")
                   .small-12.medium-6.end.columns
-                    h3.major Title
-                    p context
-                    a.special(href='#') View more
+                    .post
+                      h3.major Title
+                      p context
+                      a.special(href='#') View more
               .small-12.columns
                 a.secondary.hollow.button.btn-blog(href='#') All Articles
               
           section.contact
-          .row
-            .small-12.columns
-              h2 Get in touch
-            
-            .small-6.columns
-              ul.contact
-                li
-                  a.fa.fa-envelope.fa-2x(href="mailto:irene84111@gmail.com") irene84111@gmail.com
-                li
-                  a.fa.fa-facebook-square.fa-2x(href="https://www.facebook.com/irene.chang.735"  target="_blank")
-                li
-                  a.fa.fa-github-square.fa-2x(href="https://github.com/irene84111" target="_blank")
-            
-            .small-6.columns
-              form(method='post', action='#')
-                .field
-                  label(for="middle-label") Name
-                    input#name(type='text')
-                .field
-                  label(for="middle-label") Email
-                    input#email(type='email')
-                .field
-                  label(for="middle-label") Message
-                    textarea#message(name='message', rows='4')
+            .row
+              .small-10.small-centered.columns
+                .content.text-center
+                  p Feel free to contact me, I'm available for hiring :-)
               
-              .input-group-button
-                input.button(type="submit", value="Submit")
+              .small-12.columns
+                form#contact(name='contact', method='post')
+                  fieldset
+                    label#name(for='name') Name
+                      span.required *
+                    input#name(type='text', name='name', value='', required='')
+                    
+                    label#email(for='email') Email
+                      span.required *
+                    input#email(type='text', name='email', value='', required='')
+                    
+                    label#message(for='Message') Message
+                      span.required *
+                    textarea#message(name='message', rows="4", required='')
+                    
+                    label#captcha(for='Captcha')
+                      | Name the small house pet that says &quot;
+                      i meow
+                      | &quot;
+                      span.required *
+                    input(type='text', name='captcha', value='', required='')
+                    
+                    input#submit.secondary.hollow.button.btn-contact(type='submit', name='submit', value='Send')
+                    
+                #success
+                  span.text-center
+                    p Your message was sent successfully! I will be in touch as soon as I can.
+                #error
+                  span.text-center
+                    p Something went wrong, try refreshing and submitting the form again.
+
+                        

@@ -65,6 +65,12 @@ gulp.task('copyCSS', function() {
 
 // 複製JS
 gulp.task('copyJS', function() {
+  return gulp.src(['src/views/*.php'])
+    .pipe(gulp.dest('dist'));
+});
+
+// 複製JS
+gulp.task('copyPHP', function() {
   return gulp.src(['src/scripts/plugins/*.js'])
     .pipe(gulp.dest('dist/scripts/plugins'));
 });
@@ -85,7 +91,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copyCSS', 'copyJS']);
+gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copyCSS', 'copyJS', 'copyPHP']);
 
 gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('src/stylesheets/**/*.{scss,sass}',['styles', reload]);
