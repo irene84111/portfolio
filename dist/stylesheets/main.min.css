@@ -6,7 +6,7 @@ html *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .home-page .cover .title h1{color:rgba(51,51,51,.9);text-shadow:8px 8px 3px rgba(77,160,176,.3),-2px -2px 5px rgba(213,51,105,.6),0 0 10px rgba(255,255,255,.8)}
 .home-page .cover .title p{color:rgba(51,51,51,.8);text-shadow:0 0 5px rgba(255,255,255,.8)}
 .home-page .cover i{color:rgba(51,51,51,.8);margin:30px 0}
-.home-page .home-box{background:rgba(254,254,254,.9);max-width:800px;height:100%;border-radius:10px 10px 0 0;margin:0 auto;padding-bottom:20px;z-index:1000}
+.home-page .home-box{background:rgba(254,254,254,.9);max-width:800px;height:100%;border-radius:10px 10px 0 0;margin:0 auto;padding-bottom:20px}
 .home-page .home-box .button.hollow.secondary{border-radius:3px;border:1px solid rgba(119,119,119,.8);color:#777;margin:0 auto;float:none;display:block;width:120px}
 .home-page .home-box .button.hollow.secondary.btn-about:focus,.home-page .home-box .button.hollow.secondary.btn-about:hover{border:1px solid rgba(178,213,186,.8);color:rgba(178,213,186,.8)}
 .home-page .home-box .button.hollow.secondary.btn-work:focus,.home-page .home-box .button.hollow.secondary.btn-work:hover{border:1px solid rgba(97,173,160,.8);color:rgba(97,173,160,.8)}
@@ -58,6 +58,7 @@ footer .top{color:#444;text-align:center}
 footer .top p{margin-top:-10px}
 footer .social-link a{display:inline-block;padding:0 5px}
 footer .copyright{text-align:right;color:#444;font-size:12px}
+.stop-scrolling{height:100%;overflow:hidden}
 #cd-vertical-nav{position:fixed;right:40px;top:50%;bottom:auto;-webkit-transform:translateY(-50%);transform:translateY(-50%);z-index:1}
 #cd-vertical-nav li{list-style:none;text-align:right}
 #cd-vertical-nav a{display:inline-block;-webkit-backface-visibility:hidden;backface-visibility:hidden}
