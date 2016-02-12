@@ -43,7 +43,7 @@ gulp.task('scripts', function() {
   return gulp.src('src/scripts/*.js')
     // .pipe(jshint('.jshintrc'))
     // .pipe(jshint.reporter('default'))
-    .pipe(concat('main.js'))
+    // .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/scripts'))
     .pipe(notify({ message: 'Scripts task complete' }));
@@ -64,15 +64,15 @@ gulp.task('copyCSS', function() {
 });
 
 // 複製JS
-gulp.task('copyJS', function() {
+// gulp.task('copyJS', function() {
+//   return gulp.src(['src/scripts/**/*.js'])
+//     .pipe(gulp.dest('dist/scripts'));
+// });
+
+// 複製PHP
+gulp.task('copyPHP', function() {
   return gulp.src(['src/views/*.php'])
     .pipe(gulp.dest('dist'));
-});
-
-// 複製JS
-gulp.task('copyPHP', function() {
-  return gulp.src(['src/scripts/plugins/*.js'])
-    .pipe(gulp.dest('dist/scripts/plugins'));
 });
 
 // 收拾
@@ -91,7 +91,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copyCSS', 'copyJS', 'copyPHP']);
+gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copyCSS', 'copyPHP']);
 
 gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('src/stylesheets/**/*.{scss,sass}',['styles', reload]);

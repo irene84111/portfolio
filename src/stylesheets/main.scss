@@ -53,7 +53,6 @@ html * {
     border-radius: 10px 10px 0px 0px;
     margin: 0px auto;
     padding-bottom: 20px;
-    z-index: 1000;
     
     .button.hollow.secondary{
       border-radius: 3px;
@@ -330,6 +329,11 @@ footer{
     color: #444;
     font-size: 12px;
   }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 // Virtical Navigation
