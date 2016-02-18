@@ -63,17 +63,11 @@ gulp.task('copyCSS', function() {
     .pipe(gulp.dest('dist/stylesheets/'));
 });
 
-// 複製JS
+// // 複製JS
 // gulp.task('copyJS', function() {
 //   return gulp.src(['src/scripts/**/*.js'])
 //     .pipe(gulp.dest('dist/scripts'));
 // });
-
-// 複製PHP
-gulp.task('copyPHP', function() {
-  return gulp.src(['src/views/*.php'])
-    .pipe(gulp.dest('dist'));
-});
 
 // 收拾
 gulp.task('clean', function() {  
@@ -91,11 +85,11 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copyCSS', 'copyPHP']);
+gulp.task('build', ['styles', 'templates', 'scripts', 'images', 'copyCSS']);
 
 gulp.task('serve', ['clean', 'build', 'browser-sync'], function () {
   gulp.watch('src/stylesheets/**/*.{scss,sass}',['styles', reload]);
-  gulp.watch('src/scripts/**/*.js',['js', reload]);
+  gulp.watch('src/scripts/**/*.js',['scripts', reload]);
   gulp.watch('src/images/**/*',['images', reload]);
   gulp.watch('src/views/*.jade',['templates', reload]);
 });

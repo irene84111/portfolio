@@ -1,3 +1,4 @@
+*,.home-page{font-family:Montserrat,sans-serif}
 .button.hollow.secondary{border-radius:3px;border:1px solid rgba(119,119,119,.8);color:#777;margin:0 auto;float:none;display:block;width:120px}
 .button.hollow.secondary.btn-about:focus,.button.hollow.secondary.btn-about:hover{border:1px solid rgba(178,213,186,.8);color:rgba(178,213,186,.8)}
 .button.hollow.secondary.btn-work:focus,.button.hollow.secondary.btn-work:hover{border:1px solid rgba(97,173,160,.8);color:rgba(97,173,160,.8)}
@@ -13,7 +14,6 @@ a.special:focus,a.special:hover{color:#004094}
 #cd-vertical-nav a{display:inline-block}
 #cd-vertical-nav a:after{content:"";display:table;clear:both}
 #cd-vertical-nav a span{float:right;-webkit-transform:scale(.6);transform:scale(.6)}
-.home-page .home-box .skill .percentages-design .chartTab i,.home-page .home-box .skill .percentages-web .chartTab i{float:left}
 #cd-vertical-nav a:hover span{-webkit-transform:scale(1);transform:scale(1)}
 #cd-vertical-nav a:hover .cd-label{opacity:1}
 #cd-vertical-nav a.is-selected .cd-dot{background-color:rgba(119,119,119,.8)}
@@ -27,15 +27,51 @@ footer .copyright{text-align:right;color:#333;font-size:12px}
 .cd-panel{position:fixed;visibility:hidden;transition:visibility 0s .6s;z-index:2}
 .cd-panel::after{position:absolute;background:0 0;transition:background .3s .3s}
 .cd-panel.is-visible{visibility:visible;background:rgba(0,0,0,.6);transition:background .5s 0s}
-.cd-panel-header{position:fixed;width:400px;height:50px;line-height:50px;background:rgba(255,255,255,.8);z-index:2;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:top .3s 0s}
+.cd-panel-header{position:fixed;width:400px;height:50px;line-height:50px;background:rgba(255,255,255,.9);z-index:2;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:top .3s 0s}
 .from-right .cd-panel-header{top:-50px;right:0}
 .is-visible .cd-panel-header{top:0;transition:top .3s 0s}
 .cd-panel-close{position:absolute;top:0;right:0;height:100%;width:60px}
-.cd-panel-container{position:fixed;width:100%;height:100%;top:0;background:#888;z-index:1;transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;transition-duration:.3s;transition-delay:.3s}
-.cd-panel-content{position:absolute;top:0;left:0;width:100%;height:100%;padding:70px 5%;overflow:auto;-webkit-overflow-scrolling:touch}
+.cd-panel-close i{margin-left:20px}
+.cd-panel-container{position:fixed;width:100%;height:100vh;top:0;background:rgba(200,200,200,.9);overflow:scroll;z-index:1;transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;transition-duration:.3s;transition-delay:.3s}
+.cd-panel-content{position:absolute;top:0;left:0;width:100%;height:auto;padding:70px 0;-webkit-overflow-scrolling:touch}
 .from-right .cd-panel-container{right:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
 .is-visible .cd-panel-container{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);transition-delay:0s}
-.home-page{font-family:Montserrat,sans-serif;background-attachment:fixed;background-repeat:no-repeat;background-position:top center;background-size:cover;background-image:url(../images/bg.jpg);padding:0 20px}
+@media screen and (min-width:40em){.cd-panel-container,.cd-panel-header{width:70%}
+}
+.cd-container{width:90%;max-width:1170px;margin:0 auto}
+.cd-container::after{content:'';display:table;clear:both}
+#cd-timeline::before{content:'';position:absolute;top:0;left:18px;height:100%;width:4px;background:#fff}
+.cd-timeline-block:after,.cd-timeline-content:after{content:"";clear:both}
+.cd-timeline-block{position:relative;margin:2em 0}
+.cd-timeline-block:after{display:table}
+.cd-timeline-block:first-child{margin-top:0}
+.cd-timeline-block:last-child{margin-bottom:0}
+.cd-timeline-img{position:absolute;top:0;left:0;width:40px;height:40px;border-radius:50%;box-shadow:0 0 0 4px #fff,inset 0 2px 0 rgba(0,0,0,.08),0 3px 0 4px rgba(0,0,0,.05)}
+.cd-timeline-img i{color:#fff;font-size:32px;display:block;position:relative;left:50%;top:50%;margin-left:-20px;margin-top:-15px;text-shadow:0 1px 5px rgba(119,119,119,.8)}
+.cd-timeline-img.cd-picture{background:#75ce66}
+.cd-timeline-img.cd-movie{background:#c03b44}
+.cd-timeline-img.cd-location{background:#f0ca45}
+.cd-timeline-content{position:relative;margin-left:60px;background:#fff;border-radius:10px;padding:20px;box-shadow:0 3px 0 #d7e4ed}
+.cd-timeline-content:after{display:table}
+.cd-timeline-content h2{color:#333}
+.cd-timeline-content p{color:#777}
+.cd-timeline-content .cd-date{font-size:18px;color:#333;display:inline-block}
+.cd-timeline-content::before{content:'';position:absolute;top:16px;right:100%;height:0;width:0;border:7px solid transparent;border-right:7px solid #fff}
+@media screen and (min-width:64em){#cd-timeline{margin-top:3em;margin-bottom:3em}
+#cd-timeline::before{left:50%;margin-left:-2px}
+.cd-timeline-block{margin:4em 0}
+.cd-timeline-block:first-child{margin-top:0}
+.cd-timeline-block:last-child{margin-bottom:0}
+.cd-timeline-img{width:60px;height:60px;left:50%;margin-left:-30px}
+.cd-timeline-content{margin-left:0;padding:1.6em;width:45%}
+.cd-timeline-content::before{top:24px;left:100%;border-color:transparent transparent transparent #fff}
+.cd-timeline-content .cd-date{position:absolute;width:100%;left:122%;top:6px}
+.cd-timeline-block:nth-child(even) .cd-timeline-content{float:right}
+.cd-timeline-block:nth-child(even) .cd-timeline-content::before{top:24px;left:auto;right:100%;border-color:transparent #fff transparent transparent}
+.cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date{left:auto;right:122%;text-align:right}
+}
+.home-page .home-box .skill .percentages-design .chartTab i,.home-page .home-box .skill .percentages-web .chartTab i{float:left}
+.home-page{background-attachment:fixed;background-repeat:no-repeat;background-position:top center;background-size:cover;background-image:url(../images/bg.jpg);padding:0 20px}
 .home-page .cover{height:100vh}
 .home-page .cover .title{position:absolute;top:75%;left:0;text-align:center}
 .home-page .cover .title h1{color:rgba(51,51,51,.9);text-shadow:8px 8px 3px rgba(77,160,176,.3),-2px -2px 5px rgba(213,51,105,.6),0 0 10px rgba(255,255,255,.8)}

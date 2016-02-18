@@ -1,7 +1,9 @@
+@import 'foundation/foundation';
 @import 'component/basic';
 @import 'component/nav';
 @import 'component/footer';
 @import 'component/panel';
+@import 'component/timeline';
 
 .home-page{
   font-family: $font-family;
@@ -37,6 +39,7 @@
     border-radius: 10px 10px 0px 0px;
     margin: 0px auto;
     padding-bottom: 20px;
+    
     
     // About
     .about{
