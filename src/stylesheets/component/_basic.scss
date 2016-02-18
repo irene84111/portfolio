@@ -1,0 +1,124 @@
+// font
+$font-family:'Montserrat', sans-serif;
+
+// color
+$grayHard-1: rgba(51, 51, 51, 1);
+$grayHard-2: rgba(51, 51, 51, 0.9);
+$grayHard-3: rgba(51, 51, 51, 0.8);
+
+$graySoft-1: rgba(119, 119, 119, 1);
+$graySoft-2: rgba(119, 119, 119, 0.9);
+$graySoft-3: rgba(119, 119, 119, 0.8);
+
+$green-1: rgba(178, 213, 186, 0.8);
+$green-2: rgba(97, 173, 160, 0.8);
+$green-3: rgba(36, 143, 141, 0.8);
+
+$orange-1: rgba(254, 229, 173, 0.8);
+$orange-2: rgba(250, 202, 102, 0.8);
+$orange-3: rgba(247, 165, 65, 0.8);
+
+$link-color: rgba(0, 110, 255, 0.8);
+$link-hover: rgba(0, 64, 148, 1);
+
+// background
+@mixin bg {
+  background-position: top center;
+  background-size: cover;
+}
+
+@mixin bg-fixed {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  @include bg;
+}
+
+//transforms
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+	   -moz-transform: $transforms;
+      -ms-transform: $transforms;
+	     -o-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+}
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin transform-origin ($origin) {
+  -webkit-transform-origin: $origin;
+      moz-transform-origin: $origin;
+      -ms-transform-origin: $origin;
+	     -o-transform-origin: $origin;
+          transform-origin: $origin;
+}
+
+@mixin transition($arguments...) {
+    -webkit-transition: $arguments;
+       -moz-transition: $arguments;
+            transition: $arguments;
+}
+
+// button
+.button.hollow.secondary{
+  border-radius: 3px;
+  border: 1px solid $graySoft-3;
+  color: $graySoft-1;
+  margin: 0px auto;
+  float: none;
+  display: block;
+  width: 120px;
+}
+
+.button.hollow.secondary.btn-about:hover, .button.hollow.secondary.btn-about:focus{
+  border: 1px solid $green-1;
+  color: $green-1;
+}
+
+.button.hollow.secondary.btn-work:hover, .button.hollow.secondary.btn-work:focus{
+  border: 1px solid $green-2;
+  color: $green-2;
+}
+
+.button.hollow.secondary.btn-blog:hover, .button.hollow.secondary.btn-blog:focus{
+  border: 1px solid $green-3;
+  color: $green-3;
+}
+
+// Common
+.title {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.content {
+  padding: 120px 0px 40px;
+  line-height: 32px;
+  color: $grayHard-3;
+  abbr {
+    color: $grayHard-3;
+  }
+}
+
+a.special{
+  font-size: 14px;
+  float: none;
+  color: $link-color;
+}
+a.special:hover, a.special:focus{
+  color: $link-hover;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,20 @@
+footer{
+  .top{
+    color: $grayHard-1;
+    text-align: center;
+    p{
+      margin-top: -10px;
+    }
+  }
+  .social-link{
+    a{
+      display: inline-block;
+      padding: 0px 5px;
+    }
+  }
+  .copyright{
+    text-align: right;
+    color: $grayHard-1;
+    font-size: 12px;
+  }
+}

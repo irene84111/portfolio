@@ -1,0 +1,61 @@
+#cd-vertical-nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  bottom: auto;
+  @include translate(0,-50%);
+  z-index: 1;
+  
+  li {
+    list-style: none;
+    text-align: right;
+  }
+  
+  a {
+    display: inline-block;
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    span {
+      float: right;
+      @include scale(0.6);
+    }
+    &:hover {
+      span {
+        @include scale(1);
+      }
+      .cd-label {
+        opacity: 1;
+      }
+    }
+    &.is-selected .cd-dot {
+      background-color: $graySoft-3;
+    }
+  }
+  .cd-dot {
+    position: relative;
+    top: 10px; // For aligning the dots and label.
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: $grayHard-1;
+    @include transform-origin(50% 50%);
+    -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+    -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+    transition: transform 0.2s, background-color 0.5s;
+  }
+  .cd-label {
+    position: relative;
+    margin-right: 10px;
+    padding: .4em .5em;
+    color:  $grayHard-1;
+    font-size: 14px;
+    @include transform-origin(100% 50%);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+  }
+}
