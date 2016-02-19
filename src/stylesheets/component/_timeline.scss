@@ -20,7 +20,7 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 18px;
+    left: 10%;
     height: 100%;
     width: 4px;
     background: white;
@@ -41,6 +41,15 @@
   &:last-child {
     margin-bottom: 0;
   }
+  
+  .year-line{
+    background: rgba(200, 200, 200, 1);
+    width: 58px;
+    height: 60px;
+    color: white;
+    line-height: 56px;
+    text-shadow: 0 1px 5px $graySoft-3;
+  }
 }
 
 .cd-timeline-img {
@@ -53,23 +62,20 @@
   box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
   i {
     color: white;
-    font-size: 32px;
+    font-size: 24px;
     display: block;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    margin-left: -20px;
-    margin-top: -15px;
+    line-height: 38px;
     text-shadow: 0 1px 5px $graySoft-3;
+    margin-left: 5px;
   }
-  &.cd-picture {
-    background: #75ce66;
+  &.cd-important {
+    background: $red;
   }
-  &.cd-movie {
-    background: #c03b44;
+  &.cd-sub-important {
+    background: $yellow;
   }
-  &.cd-location {
-    background: #f0ca45;
+  &.cd-activity {
+    background: $green;
   }
 }
 
@@ -78,7 +84,7 @@
   margin-left: 60px;
   background: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 3px 0 #d7e4ed;
   &:after {
     content: "";
@@ -90,12 +96,16 @@
   }
   p{
     color: $graySoft-1;
+    margin: 10px 0 0;
+  }
+  abbr{
+    color: $graySoft-1;
   }
   .cd-date{
-    font-size: 18px;
+    font-size: 14px;
     color: $grayHard-1;
     display: inline-block;
-    
+    margin-top: 20px;
   }
 }
 
@@ -110,6 +120,19 @@
     width: 0;
     border: 7px solid transparent;
     border-right: 7px solid white;
+  }
+}
+
+@media #{$medium-up} {
+  #cd-timeline {
+    &::before {
+      /* this is the vertical line */
+      top: 0;
+      left: 8%;
+    }
+  }
+  .year-line{
+    margin-left: -1%;
   }
 }
 
@@ -130,17 +153,32 @@
     &:last-child {
       margin-bottom: 0;
     }
+    
+    .year-line{
+      margin: 0 auto;
+    }
   }
   .cd-timeline-img {
     width: 60px;
     height: 60px;
     left: 50%;
     margin-left: -30px;
+    
+    i {
+      color: white;
+      font-size: 32px;
+      display: block;
+      line-height: 60px;
+      position: relative;
+      left: 10%;
+      text-shadow: 0 1px 5px $graySoft-3;
+    }
   }
+
   .cd-timeline-content {
     margin-left: 0;
-    padding: 1.6em;
-    width: 44%;
+    padding: 20px;
+    width: 43%;
     // small-arrow
     &::before {
       top: 24px;
@@ -149,10 +187,14 @@
       border-left-color: white;
     }
     .cd-date {
+      color: white;
+      font-size: 18px;
+      text-shadow: 0 1px 5px $graySoft-3;
       position: absolute;
       width: 100%;
-      left: 122%;
-      top: 6px;
+      left: 135%;
+      top: 18px;
+      margin-top: 0px;
     }
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
@@ -167,7 +209,7 @@
     }
     .cd-date {
       left: auto;
-      right: 122%;
+      right: 135%;
       text-align: right;
     }
   }

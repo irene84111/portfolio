@@ -250,3 +250,23 @@
     }
   }
 }
+
+// RWD
+@media #{$medium-only} {
+
+}
+
+@media #{$small-only} {
+  .cover{
+    .title{    
+      h1{
+        font-size: 36px;
+      }
+      p{
+      }  
+    }
+    i{
+      margin-top: -20px;
+    }
+  }
+}
