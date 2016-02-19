@@ -63,7 +63,7 @@ gulp.task('copyCSS', function() {
     .pipe(gulp.dest('dist/stylesheets/'));
 });
 
-// // 複製JS
+// 複製JS
 // gulp.task('copyJS', function() {
 //   return gulp.src(['src/scripts/**/*.js'])
 //     .pipe(gulp.dest('dist/scripts'));
