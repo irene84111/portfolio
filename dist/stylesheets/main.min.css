@@ -18,25 +18,27 @@ a.special:focus,a.special:hover{color:#004094}
 #cd-vertical-nav a:hover .cd-label{opacity:1}
 #cd-vertical-nav a.is-selected .cd-dot{background-color:rgba(119,119,119,.8)}
 #cd-vertical-nav .cd-dot{position:relative;top:10px;height:15px;width:15px;border-radius:50%;background-color:#333;moz-transform-origin:50% 50%;-webkit-transform-origin:50% 50%;transform-origin:50% 50%;transition:background-color .5s,-webkit-transform .2s;transition:transform .2s,background-color .5s;transition:transform .2s,background-color .5s,-webkit-transform .2s}
-.cd-panel,.cd-panel::after{top:0;width:100%;height:100%;left:0}
+.cd-panel,.cd-panel::after{top:0;height:100%;width:100%}
 #cd-vertical-nav .cd-label{position:relative;margin-right:10px;padding:.4em .5em;color:#333;font-size:14px;moz-transform-origin:100% 50%;-webkit-transform-origin:100% 50%;transform-origin:100% 50%;transition:opacity .2s,-webkit-transform .2s;transition:transform .2s,opacity .2s;transition:transform .2s,opacity .2s,-webkit-transform .2s;opacity:0}
 footer .top{color:#333;text-align:center}
 footer .top p{margin-top:-10px}
 footer .social-link a{display:inline-block;padding:0 5px}
 footer .copyright{text-align:right;color:#333;font-size:12px}
-.cd-panel{position:fixed;visibility:hidden;transition:visibility 0s .6s;z-index:2}
-.cd-panel::after{position:absolute;background:0 0;transition:background .3s .3s}
+.cd-panel{position:fixed;left:0;visibility:hidden;transition:visibility 0s .6s;z-index:2}
+.cd-panel::after{position:absolute;left:0;background:0 0;transition:background .3s .3s}
 .cd-panel.is-visible{visibility:visible;background:rgba(0,0,0,.6);transition:background .5s 0s}
-.cd-panel-header{position:fixed;width:400px;height:50px;line-height:50px;background:rgba(255,255,255,.9);z-index:2;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:top .3s 0s}
-.from-right .cd-panel-header{top:-50px;right:0}
+.cd-panel-header{position:fixed;width:100%;height:200px;padding:20px 40px;background:rgba(255,255,255,.9);z-index:2;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:top .3s 0s}
+.from-right .cd-panel-header{top:-200px;right:0}
 .is-visible .cd-panel-header{top:0;transition:top .3s 0s}
 .cd-panel-close{position:absolute;top:0;right:0;height:100%;width:60px}
 .cd-panel-close i{margin-left:20px}
-.cd-panel-container{position:fixed;width:100%;height:100vh;top:0;background:rgba(200,200,200,.9);overflow:scroll;z-index:1;transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;transition-duration:.3s;transition-delay:.3s}
-.cd-panel-content{position:absolute;top:0;left:0;width:100%;height:auto;padding:70px 0;-webkit-overflow-scrolling:touch}
+.cd-panel-container{position:fixed;width:100%;height:100vh;top:0;background:rgba(200,200,200,.9);overflow:scroll;z-index:1;transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;transition-duration:.3s}
+.cd-panel-content{position:absolute;top:0;left:0;width:100%;height:auto;padding:200px 0;-webkit-overflow-scrolling:touch}
 .from-right .cd-panel-container{right:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
 .is-visible .cd-panel-container{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);transition-delay:0s}
 @media screen and (min-width:40em){.cd-panel-container,.cd-panel-header{width:70%}
+}
+@media screen and (min-width:64em){.cd-panel-container,.cd-panel-header{width:60%}
 }
 .cd-container{width:90%;max-width:1170px;margin:0 auto}
 .cd-container::after{content:'';display:table;clear:both}
@@ -63,7 +65,7 @@ footer .copyright{text-align:right;color:#333;font-size:12px}
 .cd-timeline-block:first-child{margin-top:0}
 .cd-timeline-block:last-child{margin-bottom:0}
 .cd-timeline-img{width:60px;height:60px;left:50%;margin-left:-30px}
-.cd-timeline-content{margin-left:0;padding:1.6em;width:45%}
+.cd-timeline-content{margin-left:0;padding:1.6em;width:44%}
 .cd-timeline-content::before{top:24px;left:100%;border-color:transparent transparent transparent #fff}
 .cd-timeline-content .cd-date{position:absolute;width:100%;left:122%;top:6px}
 .cd-timeline-block:nth-child(even) .cd-timeline-content{float:right}
