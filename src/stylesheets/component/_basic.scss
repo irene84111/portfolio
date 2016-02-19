@@ -1,6 +1,10 @@
 // font
 $font-family:'Montserrat', sans-serif;
 
+h1, h2, h3, h4, h5, h6, p{
+  font-family: $font-family !important;
+}
+
 // color
 $grayHard-1: rgba(51, 51, 51, 1);
 $grayHard-2: rgba(51, 51, 51, 0.9);
@@ -17,6 +21,10 @@ $green-3: rgba(36, 143, 141, 0.8);
 $orange-1: rgba(254, 229, 173, 0.8);
 $orange-2: rgba(250, 202, 102, 0.8);
 $orange-3: rgba(247, 165, 65, 0.8);
+
+$red: #c03b44;
+$green: #75ce66;
+$yellow: #f0ca45;
 
 $link-color: rgba(0, 110, 255, 0.8);
 $link-hover: rgba(0, 64, 148, 1);
@@ -79,6 +87,16 @@ $link-hover: rgba(0, 64, 148, 1);
   width: 120px;
 }
 
+.button.hollow.disabled{
+  border-radius: 3px;
+  border: 1px solid $graySoft-3;
+  color: $graySoft-1;
+  margin: 0px auto;
+  float: none;
+  display: block;
+  width: 120px;
+}
+
 .button.hollow.secondary.btn-about:hover, .button.hollow.secondary.btn-about:focus{
   border: 1px solid $green-1;
   color: $green-1;
@@ -121,4 +139,17 @@ a.special:hover, a.special:focus{
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
+}
+
+// RWD
+@media #{$medium-only} {
+  .content {
+    padding: 80px 0px 40px;
+  }
+}
+
+@media #{$small-only} {
+  .content {
+    padding: 60px 0px 20px;
+  }
 }

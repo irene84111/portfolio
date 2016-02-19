@@ -37,8 +37,8 @@
   .cd-dot {
     position: relative;
     top: 10px; // For aligning the dots and label.
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     border-radius: 50%;
     background-color: $grayHard-1;
     @include transform-origin(50% 50%);
@@ -57,5 +57,28 @@
     -moz-transition: -moz-transform 0.2s, opacity 0.2s;
     transition: transform 0.2s, opacity 0.2s;
     opacity: 0;
+  }
+}
+
+// RWD
+@media #{$medium-only} {
+  .cd-dot {
+    top: 10px; // For aligning the dots and label.
+    right: -28px;
+  }
+  .cd-label {
+    margin-right: -20px !important;
+  }
+}
+
+@media #{$small-only} {
+  .cd-dot {
+    top: 10px; // For aligning the dots and label.
+    right: -22px;
+    height: 12px;
+    width: 12px;
+  }
+  .cd-label {
+    margin-right: -20px !important;
   }
 }
