@@ -32,7 +32,7 @@
             </div>
           </div>
         </section>
-        <div class="row cd-timeline-block">
+        <div class="row">
           <div class="small-12 columns">
             <div id="start" class="home-box">
               <section id="about" class="about cd-section">
@@ -56,27 +56,28 @@
                       <p>While major in Graphic Design, <br>I'm also a self-taught Front-end Developer.</p>
                     </div>
                     <div class="small-12 columns">
-                      <ul class="lines">
-                        <li class="line l--0"><span class="line__label title">Skill level:</span></li>
-                        <li class="line l--25"><span class="line__label">The basics</span></li>
-                        <li class="line l--50"><span class="line__label">Advanced</span></li>
-                        <li class="line l--75"><span class="line__label">Seasoned</span></li>
-                        <li class="line l--100"><span class="line__label">Expert</span></li>
-                      </ul>
-                      <div class="charts">
-                        <div class="chart chart--dev"><span class="chart__title">Development</span>
-                          <ul class="chart--horiz">
-                            <li data-skill="95" class="chart__bar"><span class="chart__label">HTML(5)</span></li>
-                            <li data-skill="95" class="chart__bar"><span class="chart__label">CSS(3) &amp; SCSS   </span></li>
-                            <li data-skill="70" class="chart__bar"><span class="chart__label">JavaScript</span></li>
-                          </ul>
-                        </div>
-                        <div class="chart chart--design"><span class="chart__title">Design</span>
-                          <ul class="chart--horiz">
-                            <li data-skill="45" class="chart__bar"><span class="chart__label">Photoshop</span></li>
-                            <li data-skill="35" class="chart__bar"><span class="chart__label">Illustrator</span></li>
-                            <li data-skill="60" class="chart__bar"><span class="chart__label">User Experience</span></li>
-                          </ul>
+                      <div class="skills">
+                        <ul class="lines">
+                          <li class="line l-0"><span class="line-label title">Skill level:</span></li>
+                          <li class="line l-25"><span class="line-label">The basics</span></li>
+                          <li class="line l-50"><span class="line-label">Advanced</span></li>
+                          <li class="line l-75"><span class="line-label">Seasoned</span></li>
+                          <li class="line l-100"><span class="line-label">Expert</span></li>
+                        </ul>
+                        <div class="charts">
+                          <div class="chart chart-design"><span class="chart-title">Design</span>
+                            <ul class="chart-horiz">
+                              <li data-skill="70" class="chart_bar"><span class="chart_label">Photoshop</span></li>
+                              <li data-skill="80" class="chart_bar"><span class="chart_label">Illustrator</span></li>
+                            </ul>
+                          </div>
+                          <div class="chart chart-dev"><span class="chart-title">Development</span>
+                            <ul class="chart-horiz">
+                              <li data-skill="95" class="chart_bar"><span class="chart_label">HTML(5)</span></li>
+                              <li data-skill="80" class="chart_bar"><span class="chart_label">CSS(3) &amp; SCSS   </span></li>
+                              <li data-skill="50" class="chart_bar"><span class="chart_label">JavaScript</span></li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -272,7 +273,7 @@
       window.sr = ScrollReveal();
       var mainLeft = {
         duration : 1500,
-        delay    : 200,
+        delay    : 100,
         distance : '90px',
         rotate   : { z: 10 },
         scale    : 0.8
