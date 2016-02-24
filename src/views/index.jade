@@ -8,7 +8,7 @@ block js
     window.sr = ScrollReveal();
     var mainLeft = {
       duration : 1500,
-      delay    : 200,
+      delay    : 100,
       distance : '90px',
       rotate   : { z: 10 },
       scale    : 0.8
@@ -55,7 +55,7 @@ block content
             a(href="#start")
               i.fa.fa-angle-down.fa-3x
 
-      .row.cd-timeline-block
+      .row
         .small-12.columns
           .home-box#start
             section.about.cd-section#about
@@ -79,38 +79,39 @@ block content
                       br
                       | I'm also a self-taught Front-end Developer.
                   .small-12.columns
-                    ul.lines
-                      li.line.l--0
-                        span.line__label.title Skill level:
-                      li.line.l--25
-                        span.line__label The basics
-                      li.line.l--50
-                        span.line__label Advanced
-                      li.line.l--75
-                        span.line__label Seasoned
-                      li.line.l--100
-                        span.line__label Expert
-                    
-                    .charts
-                      .chart.chart--dev
-                        span.chart__title Development
-                        ul.chart--horiz
-                          li.chart__bar(data-skill='95')
-                            span.chart__label HTML(5)
-                          li.chart__bar(data-skill='95')
-                            span.chart__label CSS(3) &amp; SCSS   
-                          li.chart__bar(data-skill='70')
-                            span.chart__label JavaScript
+                    .skills
+                      ul.lines
+                        li.line.l-0
+                          span.line-label.title Skill level:
+                        li.line.l-25
+                          span.line-label The basics
+                        li.line.l-50
+                          span.line-label Advanced
+                        li.line.l-75
+                          span.line-label Seasoned
+                        li.line.l-100
+                          span.line-label Expert
 
-                      .chart.chart--design
-                        span.chart__title Design
-                        ul.chart--horiz
-                          li.chart__bar(data-skill='45')
-                            span.chart__label Photoshop
-                          li.chart__bar(data-skill='35')
-                            span.chart__label Illustrator
-                          li.chart__bar(data-skill='60')
-                            span.chart__label User Experience
+                      .charts
+                        .chart.chart-design
+                          span.chart-title Design
+                          ul.chart-horiz
+                            li.chart_bar(data-skill='70')
+                              span.chart_label Photoshop
+                            li.chart_bar(data-skill='80')
+                              span.chart_label Illustrator
+                              
+                        .chart.chart-dev
+                          span.chart-title Development
+                          ul.chart-horiz
+                            li.chart_bar(data-skill='95')
+                              span.chart_label HTML(5)
+                            li.chart_bar(data-skill='80')
+                              span.chart_label CSS(3) &amp; SCSS   
+                            li.chart_bar(data-skill='50')
+                              span.chart_label JavaScript
+
+
 
             
             section.work.cd-section#work
