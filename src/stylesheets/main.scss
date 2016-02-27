@@ -14,12 +14,13 @@
   
   .cover{
     height: 100vh;
-    .title{
+    .cover-title{
       position: absolute;
-      top: 75%;
+      bottom: 10px;
       left: 0;
-      text-align: center;    
+      text-align: center;  
       h1{
+        font-size: 36px;
         color: $grayHard-2;
         text-shadow: 8px 8px 3px rgba(77, 160, 176, 0.3),-2px -2px 5px rgba(213, 51, 105, 0.6),0px 0px 10px rgba(255,255,255,0.8);
       }
@@ -30,6 +31,7 @@
     }
     i{
       color: $grayHard-3;
+      margin-top: -20px;
     }
   }
 
@@ -58,170 +60,6 @@
       }
     }
     
-    // Skill
-    .skill{
-      
-      // Chart Basic
-      ul {
-        width: auto;
-        list-style-type: none;
-      }
-      
-      .label {
-        border-radius: 50%;
-        clip: rect(0px, 100px, 200px, 0px);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-      }
-      
-      .recorte {
-        border-radius: 50%;
-        clip: rect(0px, 200px, 200px, 100px);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-      }
-      
-      p.center-date {
-        background: rgba(254, 254, 254, 1);
-        position: absolute;
-        border-radius: 100%;
-        text-align: center;        
-        font-size: 24px;
-        color: $grayHard-1;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        width: 160px;
-        height: 160px;
-        margin: auto;
-        padding: 55px 0 0;
-        line-height: 28px;
-      }
-      
-      // Chart Design
-      .donut-chart-block-design {
-        .donut-chart {
-          position: relative;
-          margin: 20px auto 40px;
-          width: 200px;
-          height: 200px;
-          border-radius: 100%;
-          
-          //Illustrator
-          #partOne {
-            @include rotate(0);
-            .label {
-              background-color: $orange-3;
-              @include rotate(180);
-            }
-          }
-          //Photoshop
-          #partTwo {
-            @include rotate(180);
-            .label {
-              background-color: $orange-2;
-              @include rotate(120);
-            }
-          }
-          //Maya
-          #partThree {
-            @include rotate(300);
-            .label {
-              background-color: $orange-1;
-              @include rotate(60);
-            }
-          }
-        }
-      }
-
-      .percentages-design {
-        width: 230px;
-        margin: 0 auto;
-        .chartTab {
-          margin: 0px 0px 0px -30px;
-          padding: 10px 0px 0px 20px;
-          font-size: 16px;
-          color: $grayHard-1;
-          i{
-            float: left;
-          }
-          
-          &.perOne {
-            border-bottom: 5px solid $orange-3;
-          }
-          &.perTwo {
-            border-bottom: 5px solid $orange-2;
-          }
-          &.perThree {
-            border-bottom: 5px solid $orange-1;
-          }
-        }
-      }
-    
-      // Chart Web
-      .donut-chart-block-web {
-        .donut-chart {
-          position: relative;
-          margin: 20px auto 40px;
-          width: 200px;
-          height: 200px;
-          border-radius: 100%;
-          
-          //Illustrator
-          #partOne {
-            @include rotate(0);
-            .label {
-              background-color: $green-1;
-              @include rotate(126);
-            }
-          }
-          //Photoshop
-          #partTwo {
-            @include rotate(126);
-            .label {
-              background-color: $green-2;
-              @include rotate(144);
-            }
-          }
-          //Maya
-          #partThree {
-            @include rotate(270);
-            .label {
-              background-color: $green-3;
-              @include rotate(90);
-            }
-          }
-        }
-      }
-
-      .percentages-web {
-        width: 250px;
-        margin: 0 auto;
-        .chartTab {
-          margin: 0px 0px 0px -30px;
-          padding: 10px 0px 0px 20px;
-          font-size: 16px;
-          color: $grayHard-1;
-          i{
-            float: left;
-          }
-          
-          &.perOne {
-            border-bottom: 5px solid $green-1;
-          }
-          &.perTwo {
-            border-bottom: 5px solid $green-2;
-          }
-          &.perThree {
-            border-bottom: 5px solid $green-3;
-          }
-        }
-      }
-    }
-    
     // Work
     .work{
       article{
@@ -237,10 +75,9 @@
     
     // Blog
     .blog{
-      height: 580px;
       article{
         width: auto;
-        height: 240px;
+        height: 360px;
         .image{
           height: 200px;
           @include bg;
@@ -253,21 +90,22 @@
 }
 
 // RWD
-@media #{$medium-only} {
-
-}
-
-@media #{$small-only} {
+@media #{$medium-up} {
   .cover{
-    .title{    
+    .cover-title{
       h1{
-        font-size: 36px;
+        font-size: 48px !important;
       }
-      p{
-      }  
     }
     i{
-      margin-top: -20px;
+      margin: 0px !important;
+    }
+  }
+  
+  .blog{
+    article{
+      width: auto;
+      height: 250px !important;
     }
   }
 }

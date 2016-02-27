@@ -1,22 +1,45 @@
 footer{
+  padding-top:30px;
+   
   .top{
     text-align: center;
     p{
       margin-top: -10px;
     }
   }
+  .social-link{
+    width: 90px;
+    margin: 0 auto 20px;
+  }
+
   a{
     color: $grayHard-3;
     display: inline-block;
     padding: 0px 5px;
     
+    
     &:hover{
       color: $graySoft-1;
     }
   }
+
   .copyright{
-    text-align: right;
+    text-align: center;
     color: $grayHard-1;
     font-size: 12px;
+  }
+}
+
+@media #{$medium-up} {
+  footer{
+    padding-top: 60px;
+
+    .social-link{
+      margin: 0 !important;
+    }
+    
+    .copyright{
+      text-align: right !important;
+    }
   }
 }

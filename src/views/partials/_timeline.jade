@@ -1,6 +1,6 @@
 //- about-me-timeline 
 .cd-panel.from-right
-  header.cd-panel-header
+  header.cd-panel-header.hide-for-small-only
     h6 Ya Yin Chang (1995)
     h6 張 雅 茵
     p Intending to become a designer and front-end developer, I'm now focusing on graphic design as well as the development of website.
@@ -11,6 +11,13 @@
   .cd-panel-container
     .cd-panel-content
       section#cd-timeline.cd-container
+        .cd-small-header.show-for-small-only
+            h6 Ya Yin Chang (1995)
+            h6 張 雅 茵
+            p Intending to become a designer and front-end developer, I'm now focusing on graphic design as well as the development of website.
+            p As a student, I'm still learning and improving myself with great passion. There is no reason to refuse any opportunity for becoming better, please feel free to contact me :-)
+            a.cd-panel-close(href='#')
+              i.fa.fa-times.fa-lg#close  
       
         .cd-timeline-block
           .cd-timeline-img.cd-important
