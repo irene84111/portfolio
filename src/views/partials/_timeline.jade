@@ -1,6 +1,7 @@
-//- about-me-timeline 
+//- about-me-timeline   
 .cd-panel.from-right
-  header.cd-panel-header.hide-for-small-only
+    
+  header.cd-panel-header.hide-for-small-only#panel-top
     h6 Ya Yin Chang (1995)
     h6 張 雅 茵
     p Intending to become a designer and front-end developer, I'm now focusing on graphic design as well as the development of website.
@@ -8,6 +9,9 @@
     a.cd-panel-close(href='#')
       i.fa.fa-times.fa-lg#close
 
+  
+  a.cd-panel-close-mobile.show-for-small-only(href='#')
+    i.fa.fa-times.fa-lg#close
   .cd-panel-container
     .cd-panel-content
       section#cd-timeline.cd-container
@@ -16,8 +20,6 @@
             h6 張 雅 茵
             p Intending to become a designer and front-end developer, I'm now focusing on graphic design as well as the development of website.
             p As a student, I'm still learning and improving myself with great passion. There is no reason to refuse any opportunity for becoming better, please feel free to contact me :-)
-            a.cd-panel-close(href='#')
-              i.fa.fa-times.fa-lg#close  
       
         .cd-timeline-block
           .cd-timeline-img.cd-important
@@ -27,7 +29,7 @@
               | 2
               sup nd 
               | Internship @ 
-              a(href="http://albertlan.com") Albert Lan Creative
+              a(href="http://albertlan.com" target="_blank") Albert Lan Creative
             p
               | It's a 
               strong Creative Agancy 
@@ -51,7 +53,7 @@
               abbr(title="NTUST Coding Club") NCC.
             p
               | By collaborating with 
-              a(href="http://jsdc.tw") JSDC.TW
+              a(href="http://jsdc.tw" target="_blank") JSDC.TW
               | , we held a workshop for students to learn more about HTML, CSS and JavaScript.
             a.disabled.hollow.button(href='#' style="margin-top:20px") More
             span.cd-date Dec. 19
@@ -68,7 +70,7 @@
 
         .cd-timeline-block
           .cd-timeline-img.cd-sub-important
-            i.fa.fa-code(style="margin: 0 0 0 6px;")
+            i.fa.fa-code(style="margin: 0 0 0 7px;")
           .cd-timeline-content
             h6 
               | Javascript Club Course @ NCC
@@ -85,7 +87,7 @@
               | 1
               sup st 
               | Internship @ 
-              a(href="http://exma-square.co/") EXMA-Square.co
+              a(href="http://exma-square.co/" target="_blank") EXMA-Square.co
             p
               | It's a team master in application development. They provide development of high-scaling websites and technical consulting.
             p
@@ -94,14 +96,31 @@
         
         .cd-timeline-block
           .cd-timeline-img.cd-sub-important
+            img(src="images/ncc-logo.png", alt="NCC", style="margin: 17% 0 0 17%;")
           .cd-timeline-content
             h6 
               | Designer &amp; Coach @ 
-              a(href="http://ntustcoding.club/") NTUST Coding Club
+              a(href="http://ntustcoding.club/" target="_blank") NTUST Coding Club
             p NTUST Coding Club, also known as NCC, is a club based in NTUST. It aims to teach people without experience about programming. 
             p After I joining the club for a year, I became the designer of the club as well as the coach of JavaScript Club Course.
             span.cd-date Sep. 14 - Now
         
+        .cd-timeline-block
+          .cd-timeline-img.cd-activity
+            i.fa.fa-magic(style="margin: 3px 0 0 8px;")
+          .cd-timeline-content
+            h6 2015 Global Hacker Game
+            p 
+              | The activity hold by 
+              a(href="https://sudo.com.tw/" target="_blank") Sudo 
+              | &amp; 
+              a(href="https://www.makeschool.com/" target="_blank") Make School 
+              | for people who want to learn about programing.
+            p
+              | I helped the event as an assistant and had a great fun of sharing what I've known. 
+            a.disabled.hollow.button(href='#' style="margin-top:20px") More
+            span.cd-date Aug. 18 - 20
+            
         .cd-timeline-block
           .cd-timeline-img.cd-activity
             i.fa.fa-magic(style="margin: 3px 0 0 8px;")
@@ -135,7 +154,7 @@
           .cd-timeline-content
             h6 
               | Study in 
-              a(href="http://www.ntust.edu.tw/home.php") NTUST
+              a(href="http://www.ntust.edu.tw/home.php" target="_blank") NTUST
               | , Taipei
             p
               | I continued my study in 
