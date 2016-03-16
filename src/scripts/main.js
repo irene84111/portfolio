@@ -28,5 +28,5 @@ var mainRight = {
 
 sr.reveal('.about', mainLeft);
 sr.reveal('.skill', mainRight);
-sr.reveal('.work', main);
+// sr.reveal('.work', main);
 sr.reveal('.blog', main);

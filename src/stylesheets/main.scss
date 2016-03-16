@@ -76,14 +76,34 @@
     // Blog
     .blog{
       article{
-        width: auto;
-        height: 360px;
+        margin-bottom: 40px;
         .image{
-          height: 200px;
           @include bg;
+          height: 150px;
           border-radius: 3px;
-          margin-bottom: 20px;
         }
+        .post{
+          padding: 15px 0;
+          position: relative;
+          span{
+            font-size: 12px;
+            color: $graySoft-1;
+          }
+          p{
+            margin: 5px 0;
+            font-size: 14px;
+            color: $graySoft-1;
+          }
+          .special{
+            font-size: 12px;
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+          }
+        }
+      }
+      .btn-blog{
+        width: 250px;
       }
     }
   }
@@ -101,11 +121,23 @@
       margin: 0px !important;
     }
   }
-  
+}
+@media #{$large-up} {
   .blog{
     article{
-      width: auto;
-      height: 250px !important;
+      display: table;
+      .image{
+        display: table-cell;
+        width: 50%;
+      }
+      .post{
+        display: table-cell;
+        width: 50%;
+        padding: 10px 20px !important;
+        .special{
+          right: 30px !important;
+        }
+      }
     }
   }
 }

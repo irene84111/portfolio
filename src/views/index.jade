@@ -17,10 +17,10 @@ block content
           a(href='#skill', data-number='2')
             span.cd-dot
             span.cd-label Skill
-        li
-          a(href='#work', data-number='3')
-            span.cd-dot
-            span.cd-label Works
+        // li
+        //   a(href='#work', data-number='3')
+        //     span.cd-dot
+        //     span.cd-label Works
         li
           a(href='#blog', data-number='4')
             span.cd-dot
@@ -31,7 +31,7 @@ block content
         .row
           .small-12.columns.cover-title
             h1 YA YIN CHANG
-            p Graphic Designer &amp; Front-end Developer
+            p Graphic Designer &amp; Web Developer
             a(href="#start")
               i.fa.fa-angle-down.fa-3x
 
@@ -58,7 +58,7 @@ block content
                   .content.text-center
                     p While major in Graphic Design, 
                       br
-                      | I'm also a self-taught Front-end Developer.
+                      | I'm also a self-taught Web Developer.
                   .small-12.columns
                     .skills
                       ul.lines
@@ -92,43 +92,43 @@ block content
                             li.chart_bar.chart_js(data-skill='50')
                               span.chart_label JavaScript
             
-            section.work.cd-section#work
-              .row
-                .small-10.small-centered.columns
-                  .content.text-center
-                    p Here are my lastast work:
-                .small-10.small-centered.columns
-                  .small-12.medium-6.columns
-                    article
-                      .image(style="background-image:url('images/pic04.jpg')")
-                      h3.major Title
-                      p context
-                      a.special(href='#') Learn more
-                  .small-12.medium-6.columns
-                    article
-                      .image(style="background-image:url('images/pic04.jpg')")
-                      h3.major Title
-                      p context
-                      a.special(href='#') Learn more
-                .small-12.columns
-                  a.disabled.secondary.hollow.button.btn-work(href='project.html') All Works
+            // section.work.cd-section#work
+            //   .row
+            //     .small-10.small-centered.columns
+            //       .content.text-center
+            //         p Here are my lastast work:
+            //     .small-10.small-centered.columns
+            //       .small-12.medium-6.columns
+            //         article
+            //           .image(style="background-image:url('images/pic04.jpg')")
+            //           h3.major Title
+            //           p context
+            //           a.special(href='#') Learn more
+            //       .small-12.medium-6.columns
+            //         article
+            //           .image(style="background-image:url('images/pic04.jpg')")
+            //           h3.major Title
+            //           p context
+            //           a.special(href='#') Learn more
+            //     .small-12.columns
+            //       a.disabled.secondary.hollow.button.btn-work(href='project.html') All Works
             
             section.blog.cd-section#blog
               .row
                 .small-10.small-centered.columns
                   .content.text-center
-                    p I also like to share what I've learnt and done:
+                    p Welcome to look at what I'v done lately:
                 .small-10.small-centered.columns
                   article
-                    .small-12.medium-6.columns
-                      .image(style="background-image:url('images/pic04.jpg')")
-                    .small-12.medium-6.end.columns
-                      .post
-                        h3.major Title
-                        p context
-                        a.special(href='#') View more
+                    .image(style="background-image:url('images/pic04.jpg')")
+                    .post
+                      h6 Over the past year and a half
+                      span 2016-03-13
+                      p 上週四的 Facebook，首篇貼文來自系上一位女同學，描述自己決定放棄台科、前往英國學習插畫的消息。當下的震驚一直還沒有記錄下來，趁終於把部落個整理好的這個時候，來想想自己到底做了些什麼。
+                      a.special(href='#') Read more
                 .small-12.columns
-                  a.disabled.secondary.hollow.button.btn-blog(href='./blog') All Articles
+                  a.secondary.hollow.button.btn-blog(href='./blog') More Articles | 
+                    strong Double Y & C
           
             include ./partials/_footer
 
