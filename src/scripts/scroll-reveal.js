@@ -1,11 +1,3 @@
-// Mobile-panel-close
-$(".btn-about").click(function(){
-    $(".cd-panel-close-mobile").fadeIn();
-});
-$(".cd-panel-close-mobile").click(function(){
-    $(".cd-panel-close-mobile").fadeOut();
-});
-
 // ScrollReveal
 window.sr = ScrollReveal();
 var main = {

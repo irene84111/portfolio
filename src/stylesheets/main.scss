@@ -8,12 +8,11 @@
 
 .home-page{
   font-family: $font-family;
-  @include bg-fixed;
   background-image: url(../images/bg.jpg);
+  @include bg-fixed;
   padding: 0px 20px;
   
   .cover{
-    width: 100vw;
     height: 100vh;
     .cover-title{
       position: absolute;
@@ -80,9 +79,9 @@
       article{
         margin-bottom: 40px;
         .image{
-          @include bg;
           background-position: center center;
-          height: 150px;
+          background-size: cover;
+          height: 200px;
           border-radius: 3px;
         }
         .post{

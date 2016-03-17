@@ -32,7 +32,7 @@ $link-hover: rgba(0, 64, 148, 1);
 // background
 @mixin bg {
   background-position: top center;
-  background-size: cover;
+  background-size: auto 100%;
 }
 
 @mixin bg-fixed {

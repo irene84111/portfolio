@@ -3,14 +3,16 @@ jQuery(document).ready(function($){
 	$('.cd-btn').on('click', function(event){
 		event.preventDefault();
 		$('.cd-panel').addClass('is-visible');
-    $('body').addClass('stop-scrolling')
+    $('body').addClass('stop-scrolling');
+    $(".cd-panel-close-mobile").fadeIn();
 	});
-	//clode the lateral panel
+	//close the lateral panel
 	$('.cd-panel').on('click', function(event){
 		if( $(event.target).is('.cd-panel') || $(event.target).is('.cd-panel-close') || $(event.target).is('#close') ) { 
 			$('.cd-panel').removeClass('is-visible');
 			event.preventDefault();
-      $('body').removeClass('stop-scrolling')
+      $('body').removeClass('stop-scrolling');
+      $(".cd-panel-close-mobile").fadeOut();
 		}
 	});
 });
