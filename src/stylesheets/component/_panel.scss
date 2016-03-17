@@ -46,14 +46,6 @@
     line-height: 24px;
   }
   
-  a{
-    color: $grayHard-2;
-    
-    &:hover{
-      color: $graySoft-2;
-    }
-  }
-  
   .cd-panel-close {
     position: absolute;
     top: 0;
@@ -132,14 +124,6 @@
     margin: 0px;
     padding-top: 10px;
     line-height: 24px;
-  }
-  
-  a{
-    color: $grayHard-2;
-    
-    &:hover{
-      color: $graySoft-2;
-    }
   }
   .cd-panel-close {
     position: fixed;
