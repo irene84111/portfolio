@@ -23,7 +23,7 @@ gulp.task('styles', function() {
         keepBreaks: true,
     }))
     .pipe(gulp.dest('dist/stylesheets'))
-    .pipe(notify({ message: 'Styles task complete' }));
+    // .pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('templates', function() {
@@ -33,32 +33,27 @@ gulp.task('templates', function() {
       pretty: true
     }))
     .pipe(gulp.dest('dist/'))
-    .pipe(notify({ message: 'Templates task complete' }));
+    // .pipe(notify({ message: 'Templates task complete' }));
 });
 
 gulp.task('scripts', function() {  
   return gulp.src('src/scripts/*.js')
     .pipe(uglify())
     .pipe(gulp.dest('dist/scripts'))
-    .pipe(notify({ message: 'Scripts task complete' }));
+    // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 gulp.task('images', function() {  
   return gulp.src('src/images/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/images'))
-    .pipe(notify({ message: 'Images task complete' }));
+    // .pipe(notify({ message: 'Images task complete' }));
 });
 
 gulp.task('copyCSS', function() {
   return gulp.src(['src/stylesheets/**/*.css'])
     .pipe(gulp.dest('dist/stylesheets/'));
 });
-
-// gulp.task('copyJS', function() {
-//   return gulp.src(['src/scripts/**/*.js'])
-//     .pipe(gulp.dest('dist/scripts'));
-// });
 
 gulp.task('clean', function() {  
   return del(['dist/stylesheets/*.css', 'dist/scripts/*.js', 'dist/images']);
