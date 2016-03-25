@@ -6,10 +6,24 @@
 @import 'component/panel';
 @import 'component/timeline';
 
+body:before {
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(../images/bg.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .home-page{
   font-family: $font-family;
-  @include bg-fixed;
-  background-image: url(../images/bg.jpg);
   padding: 0px 20px;
   
   .cover{
@@ -37,6 +51,7 @@
 
   .home-box{
     background: rgba(254, 254, 254, 0.9);
+    box-shadow: 0px 0px 5px rgba(204,204,204,0.5);
     max-width: 800px;
     height: 100%;
     border-radius: 10px 10px 0px 0px;
@@ -76,14 +91,35 @@
     // Blog
     .blog{
       article{
-        width: auto;
-        height: 360px;
+        margin-bottom: 40px;
         .image{
+          background-position: center center;
+          background-size: cover;
           height: 200px;
-          @include bg;
           border-radius: 3px;
-          margin-bottom: 20px;
         }
+        .post{
+          padding: 15px 0;
+          position: relative;
+          span{
+            font-size: 12px;
+            color: $graySoft-1;
+          }
+          p{
+            margin: 5px 0;
+            font-size: 14px;
+            color: $graySoft-1;
+          }
+          .special{
+            font-size: 12px;
+            position: absolute;
+            right: 10px;
+            bottom: 0;
+          }
+        }
+      }
+      .btn-blog{
+        width: 180px;
       }
     }
   }
@@ -101,11 +137,24 @@
       margin: 0px !important;
     }
   }
-  
+}
+@media #{$large-up} {
   .blog{
     article{
-      width: auto;
-      height: 250px !important;
+      display: table;
+      .image{
+        display: table-cell;
+        width: 50%;
+      }
+      .post{
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+        padding: 10px 20px !important;
+        .special{
+          right: 30px !important;
+        }
+      }
     }
   }
 }

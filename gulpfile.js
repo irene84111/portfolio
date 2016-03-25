@@ -14,7 +14,6 @@ var gulp         = require('gulp'),
     argv         = require('yargs').argv,
     del          = require('del');
 
-// 編譯Sass與縮小化
 gulp.task('styles', function() {  
   return sass('./src/stylesheets/**/*.{scss,sass}', { style: 'expanded' })
     .pipe($.plumber())
@@ -24,10 +23,9 @@ gulp.task('styles', function() {
         keepBreaks: true,
     }))
     .pipe(gulp.dest('dist/stylesheets'))
-    .pipe(notify({ message: 'Styles task complete' }));
+    // .pipe(notify({ message: 'Styles task complete' }));
 });
 
-// 編譯 Jade
 gulp.task('templates', function() {
   return gulp.src('src/views/*.jade')
     .pipe($.plumber())
@@ -35,46 +33,32 @@ gulp.task('templates', function() {
       pretty: true
     }))
     .pipe(gulp.dest('dist/'))
-    .pipe(notify({ message: 'Templates task complete' }));
+    // .pipe(notify({ message: 'Templates task complete' }));
 });
 
-// JSHint、拼接及縮小化 JavaScript
 gulp.task('scripts', function() {  
   return gulp.src('src/scripts/*.js')
-    // .pipe(jshint('.jshintrc'))
-    // .pipe(jshint.reporter('default'))
-    // .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/scripts'))
-    .pipe(notify({ message: 'Scripts task complete' }));
+    // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
-// 壓縮圖片
 gulp.task('images', function() {  
   return gulp.src('src/images/**/*')
     .pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/images'))
-    .pipe(notify({ message: 'Images task complete' }));
+    // .pipe(notify({ message: 'Images task complete' }));
 });
 
-// 複製CSS
 gulp.task('copyCSS', function() {
   return gulp.src(['src/stylesheets/**/*.css'])
     .pipe(gulp.dest('dist/stylesheets/'));
 });
 
-// 複製JS
-// gulp.task('copyJS', function() {
-//   return gulp.src(['src/scripts/**/*.js'])
-//     .pipe(gulp.dest('dist/scripts'));
-// });
-
-// 收拾
 gulp.task('clean', function() {  
   return del(['dist/stylesheets/*.css', 'dist/scripts/*.js', 'dist/images']);
 });
 
-// 重整瀏覽器
 gulp.task('browser-sync', function() {
   browserSync({
     open: !!argv.open,

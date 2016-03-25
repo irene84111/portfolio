@@ -3,27 +3,36 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Irene
+    title YA YIN CHANG | Graphic Designer & Web Developer
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1')
     meta(http-equiv='Content-type', content='text/html; charset=utf-8')
     meta(content='', name='description')
-    meta(content='Irene', name='author')
+    meta(content='Ya Yin Chang', name='author')
 
     //- BEGIN Styles
     link(href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css')
     link(href='https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css' rel='stylesheet' type='text/css')
     link(href='stylesheets/font-awesome-4.5.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    link(href='stylesheets/normalize.css', rel='stylesheet', type='text/css')
     link(href='stylesheets/main.min.css', rel='stylesheet', type='text/css')
+    script(src='scripts/jquery-1.12.0.min.js', type='text/javascript')
+    script(src='scripts/prefixfree.min.js', type='text/javascript')
+    script(src='scripts/fastclick.js', type='application/javascript')
+    script(src='scripts/smooth-scroll.js', type='text/javascript')
+    script.
+      $(function() {
+        FastClick.attach(document.body);
+      });
+
     block css
     
   body
     block content
 
     //- BEGIN: Scripts    
-    script(src='scripts/jquery-1.12.0.min.js', type='text/javascript')
     script(src='scripts/foundation.min.js', type='text/javascript')
-    // script(src='scripts/modernizr.js', type='text/javascript')
-    script(src='scripts/smooth-scroll.js', type='text/javascript')
+    //- script(src='scripts/modernizr.js', type='text/javascript')
     script(src='scripts/scrollreveal.min.js', type='text/javascript')
+      
     block js
