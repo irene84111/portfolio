@@ -6,22 +6,6 @@
 @import 'component/panel';
 @import 'component/timeline';
 
-body:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url(../images/bg.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .home-page{
   font-family: $font-family;
   padding: 0px 20px;
