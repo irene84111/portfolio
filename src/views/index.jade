@@ -32,7 +32,7 @@ block content
           .small-12.columns.cover-title
             h1 YA YIN CHANG
             p Graphic Designer &amp; Web Developer
-            a(href="#start")
+            a#discover(href="#start")
               i.fa.fa-angle-down.fa-3x
 
       .row
@@ -86,9 +86,9 @@ block content
                           span.chart-title Development
                           ul.chart-horiz
                             li.chart_bar.chart_html(data-skill='90')
-                              span.chart_label HTML
+                              span.chart_label HTML / Jade
                             li.chart_bar.chart_css(data-skill='80')
-                              span.chart_label CSS &amp; SCSS   
+                              span.chart_label CSS / SCSS   
                             li.chart_bar.chart_js(data-skill='50')
                               span.chart_label JavaScript
             
@@ -117,17 +117,17 @@ block content
               .row
                 .small-10.small-centered.columns
                   .content.text-center
-                    p Welcome to look at what I'v done lately:
+                    p Welcome to look at what I'v shared lately:
                 .small-10.small-centered.columns
                   article
                     .image(style="background-image:url('images/post.jpg')")
                     .post
-                      h6  2.0 x Double Y & C
-                      span 2016-03-17
-                      p 有些人看過我的個人網頁 1.0，那是一個既沒有框架也沒有模板的悲劇。事隔一年，終於升級了！本文就要來談談打了一年新手怪的心路歷程，以及 Gulp 和 Hexo 的使用心得。
-                      a.special(href='/blog/2016/03/17/2-0-Double-Y-C/' target="_blank") Read more
+                      h6  前端初心者談心路歷程
+                      span 2016-04-14
+                      p 在每週 Coding 的時間突破 35 個小時的激勵（ 我怎麼會知道？！推薦外掛 WakaTime 追蹤你的 Coding Time）與似乎真的有讀者關注我的鼓勵之下，這篇心路歷程終於在今天產出。⋯⋯
+                      a.special(href='/blog/2016/04/14/journey-of-front-end/' target="_blank") Read more
                 .small-12.columns
-                  a.secondary.hollow.button.btn-blog(href='./blog') Blog | 
+                  a.secondary.hollow.button.btn-blog(href='./blog' target="_blank") Blog | 
                     strong Double Y & C
           
             include ./partials/_footer

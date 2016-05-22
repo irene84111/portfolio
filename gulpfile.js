@@ -1,29 +1,28 @@
 var gulp         = require('gulp'),
-    $            = require('gulp-load-plugins')(),
     sass         = require('gulp-ruby-sass'),
-    minifycss    = require('gulp-minify-css'),
-    jshint       = require('gulp-jshint'),
-    uglify       = require('gulp-uglify'),
-    imagemin     = require('gulp-imagemin'),
-    rename       = require('gulp-rename'),
-    concat       = require('gulp-concat'),
-    notify       = require('gulp-notify'),
-    cache        = require('gulp-cache'),
+    cleanCSS     = require('gulp-clean-css'),
     browserSync  = require('browser-sync'),
     reload       = browserSync.reload,
     argv         = require('yargs').argv,
     del          = require('del');
+    
+var $ = require('gulp-load-plugins')({
+  pattern: ['gulp-*', 'gulp.*'],
+  replaceString: /\bgulp[\-.]/
+});
 
 gulp.task('styles', function() {  
   return sass('./src/stylesheets/**/*.{scss,sass}', { style: 'expanded' })
     .pipe($.plumber())
-    .pipe($.autoprefixer('last 2 version'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(minifycss({
-        keepBreaks: true,
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('dist/stylesheets'))
-    // .pipe(notify({ message: 'Styles task complete' }));
+    .pipe($.rename({suffix: '.min'}))
+    .pipe(cleanCSS({
+      compatibility: 'ie8',
+      keepBreaks: true
+    }))
+    .pipe(gulp.dest('dist/stylesheets'));
 });
 
 gulp.task('templates', function() {
@@ -32,22 +31,18 @@ gulp.task('templates', function() {
     .pipe($.jade({
       pretty: true
     }))
-    .pipe(gulp.dest('dist/'))
-    // .pipe(notify({ message: 'Templates task complete' }));
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('scripts', function() {  
   return gulp.src('src/scripts/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts'))
-    // .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe($.uglify())
+    .pipe(gulp.dest('dist/scripts'));
 });
 
 gulp.task('images', function() {  
   return gulp.src('src/images/**/*')
-    .pipe(cache(imagemin({ optimizationLevel: 1, progressive: true, interlaced: true })))
-    .pipe(gulp.dest('dist/images'))
-    // .pipe(notify({ message: 'Images task complete' }));
+    .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('copyCSS', function() {
