@@ -62,13 +62,28 @@
     // Work
     .work{
       article{
-        margin: 10px 0px 60px;
-        .image{
-          height: 200px;
-          @include bg;
-          border-radius: 3px;
-          margin-bottom: 20px;
+        margin-bottom: 30px;
+
+        .special{
+          display: block;
+          padding: 10px;
+
+          text-align: center;
+          font-style: italic;
+          text-decoration: underline;
+          color: #777;
+
+          i{
+            padding-right: 5px;
+          }
+
+          &:hover{
+            color: #555;
+          }
         }
+      }
+      .btn-work{
+        width: 220px;
       }
     }
     
